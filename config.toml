@@ -10,8 +10,8 @@ theme = ["docsy"]
 enableGitInfo = true
 
 # Language settings
-contentDir = "content/en"
-defaultContentLanguage = "en"
+contentDir = "content/zh-cn"
+defaultContentLanguage = "zh-cn"
 defaultContentLanguageInSubdir = false
 # Useful when translating.
 enableMissingTranslationPlaceholders = true
@@ -52,12 +52,13 @@ id = "UA-00000000-0"
 # Language configuration
 
 [languages]
-[languages.en]
-title = "KubeCube"
-description = "An open source container platform"
-languageName ="English"
-# Weight used for sorting.
-weight = 1
+# [languages.en]
+# title = "KubeCube"
+# description = "An open source container platform"
+# languageName ="English"
+# contentDir = "content/en"
+# # Weight used for sorting.
+# weight = 1
 [languages.zh-cn]
 title = "KubeCube"
 description = "开源容器平台"
@@ -120,13 +121,13 @@ github_project_repo = "https://github.com/kubecube-io/kubecube"
 github_branch= "main"
 
 # Google Custom Search Engine ID. Remove or comment out to disable search.
-gcs_engine_id = "011737558837375720776:fsdu1nryfng"
+#gcs_engine_id = "011737558837375720776:fsdu1nryfng"
 
 # Enable Algolia DocSearch
 algolia_docsearch = false
 
 # Enable Lunr.js offline search
-offlineSearch = false
+offlineSearch = true
 
 # Enable syntax highlighting and copy buttons on code blocks with Prism
 prism_syntax_highlighting = false
@@ -149,7 +150,7 @@ footer_about_disable = true
 # If you want this feature, but occasionally need to remove the "Feedback" section from a single page,
 # add "hide_feedback: true" to the page's front matter.
 [params.ui.feedback]
-enable = true
+enable = false
 # The responses that the user sees after clicking "yes" (the page was helpful) or "no" (the page was not helpful).
 yes = 'Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.'
 no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.'
