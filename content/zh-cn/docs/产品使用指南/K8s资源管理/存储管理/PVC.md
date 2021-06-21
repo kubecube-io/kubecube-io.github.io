@@ -13,11 +13,11 @@ weight: 1
 
 1、选择租户和项目，选择集群和空间，点击存储菜单，进入 PVC 管理页面。在管理页面可以进行 PVC 记录的添加、设置、删除和 Yaml 设置。
 
-![manage1](/imgs/k8sres/storage/manage1.png)
+![manage1](/imgs/产品使用指南/K8s资源管理/存储管理/pvc/manage1.png)
 
 2、点击创建存储声明，弹出创建存储声明的窗口。
 
-![create](/imgs/k8sres/storage/create.png)
+![create](/imgs/产品使用指南/K8s资源管理/存储管理/pvc/create.png)
 
 - 存储类别：选择存储类别，存储类别可以在集群管理页面添加
 - 名称：存储声明名称
@@ -28,4 +28,4 @@ weight: 1
 
 在 PVC 管理页面选择一条 PVC 记录，可以查看该 PVC 记录的详细信息，可以查看绑定的副本信息和监控信息。并且可以管理操作，包括删除、设置和 Yaml 设置。
 
-![detail](/imgs/k8sres/storage/detail.png)
+![detail](/imgs/产品使用指南/K8s资源管理/存储管理/pvc/detail.png)

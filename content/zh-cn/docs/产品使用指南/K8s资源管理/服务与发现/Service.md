@@ -13,11 +13,11 @@ weight: 1
 
 1、选择租户和项目，选择集群和空间，展开服务与发现菜单，点击 Services 菜单按钮，进入 Service 管理页面。
 
-![manage1](/imgs/k8sres/service/manage1.png)
+![manage1](/imgs/产品使用指南/K8s资源管理/服务与发现/service/manage1.png)
 
 2、点击创建服务按钮，进入创建服务页面，填写信息后，点击立即创建按钮，即可创建一个 Service。
 
-![create](/imgs/k8sres/service/create.png)
+![create](/imgs/产品使用指南/K8s资源管理/服务与发现/service/create.png)
 
 - 名称：输入服务名称
 
@@ -32,13 +32,13 @@ weight: 1
 
 选择租户和项目，选择集群和空间，展开服务与发现菜单，点击 Services 菜单按钮，进入 Service 管理页面，可以对 Service 列表进行设置重编辑，删除和 Yaml 设置。
 
-![manage2](/imgs/k8sres/service/manage2.png)
+![manage2](/imgs/产品使用指南/K8s资源管理/服务与发现/service/manage2.png)
 
 ## 查看 Service 详情
 
 在 Service 管理页面，点击具体一条服务名称，进入 Service 详情页面。
 
-![servicedetail](/imgs/k8sres/service/servicedetail.png)
+![servicedetail](/imgs/产品使用指南/K8s资源管理/服务与发现/service/servicedetail.png)
 
 Service 详情页面除了可以管理 Service，还可以查看 Service 的详细信息、关联的副本信息和事件信息，支持设置 Nginx Ingress 类型的对外服务端口供外部访问。
 
