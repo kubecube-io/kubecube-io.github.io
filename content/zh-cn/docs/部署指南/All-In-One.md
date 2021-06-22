@@ -5,9 +5,9 @@ weight: 2
 
 对于想要快速开始、快速体验的用户来说，All In One 是最佳的安装方式
 
-# 在 Linux 上部署 KubeCube
+## 在 Linux 上部署 KubeCube
 
-## 开始安装
+### 开始安装
 
 在 Linux 机器上执行部署脚本
 
@@ -15,16 +15,9 @@ weight: 2
 curl -fsSL https://gitee.com/kubecube/manifests/raw/master/entry.sh | bash
 ```
 
-## 等待部署完成
+## 在 Kubernetes 集群中部署 KubeCube
 
-// todo: img
-
-## 使用 admin 账户登陆 console
-
-
-# 在 Kubernetes 集群中部署 KubeCube
-
-## ⚠️修改 Kubernetes API-Server 配置
+### ⚠️修改 Kubernetes API-Server 配置
 
 **必要性**
 
@@ -72,7 +65,7 @@ spec:
       name: cube
 ```
 
-## 开始安装
+### 开始安装
 
 在 Linux 机器上执行部署脚本
 
@@ -80,7 +73,7 @@ spec:
 export CUSTOMIZE="true";curl -fsSL https://gitee.com/kubecube/manifests/raw/master/entry.sh | bash
 ```
 
-## 设置安装脚本参数
+### 设置安装脚本参数
 该安装模式下，需要修改以下参数：
 
 INSTALL_KUBECUBE_MEMBER="false"
@@ -154,8 +147,12 @@ ACCESS_PRIVATE_KEY_PATH="/root/.ssh/id_rsa"
 ```
 
 ## 等待部署完成
+KubeCube 部署完成后，请根据提示信息登陆 console 管理页面
 
-
+![complete-deploy](/imgs/部署指南/All-In-One/complete-deploy.png)
 
 ## 使用 admin 账户登陆 console
 
+⚠️请在登陆后修改 admin 用户的密码
+
+![login-console](/imgs/部署指南/All-In-One/login-console.png)
