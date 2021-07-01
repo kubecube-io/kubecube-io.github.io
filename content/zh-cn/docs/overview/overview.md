@@ -1,5 +1,5 @@
 ---
-title: "KubeCube介绍"
+title: "产品介绍"
 weight: 1
 ---
 
