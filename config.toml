@@ -195,3 +195,9 @@ enable = false
 #	url = "https://example.org/mail"
 #	icon = "fa fa-envelope"
 #        desc = "Discuss development issues around the project"
+
+[[menu.main]]
+    name = "GitHub"
+    weight = 20
+    url = "https://github.com/kubecube-io/kubecube"
+    pre = "<i class='fab fa-github'></i>"
