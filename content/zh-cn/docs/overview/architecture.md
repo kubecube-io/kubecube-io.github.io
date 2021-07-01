@@ -1,5 +1,5 @@
 ---
-title: "产品说明"
+title: "产品架构"
 weight: 2
 ---
 
