@@ -11,7 +11,7 @@ enableGitInfo = true
 
 # Language settings
 contentDir = "content/zh-cn"
-defaultContentLanguage = "zh-cn"
+defaultContentLanguage = "zh"
 defaultContentLanguageInSubdir = false
 # Useful when translating.
 enableMissingTranslationPlaceholders = true
@@ -59,7 +59,7 @@ id = "UA-00000000-0"
 # contentDir = "content/en"
 # # Weight used for sorting.
 # weight = 1
-[languages.zh-cn]
+[languages.zh]
 title = "KubeCube"
 description = "开源容器平台"
 languageName ="中文(简体)"

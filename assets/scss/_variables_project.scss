@@ -6,28 +6,47 @@ Add styles or override variables from the theme here.
 $primary: #F0F4FA;
 $secondary:  #FFFFFF;
 
-// -bg-landing-img { 
-// 	background-color: #F0F4FA!important;
-// }
-.nav-link {
-    color:#333333!important;
+-bg-landing-img { 
+	background-color: #F0F4FA!important;
 }
 
+// 导航栏字体颜色
+.nav-item > .nav-link {
+    color:#333333!important;
+    text-shadow: none;
+}
+
+// 搜索栏颜色
 .td-search-input::placeholder {
     color: #999FAA!important;
-    content: "xya"!important;
 }
 
-.td-overlay--dark::after {
+.td-overlay.td-overlay--dark::after {
     background-color: #F0F4FA!important;
 }
 
-svg {
+// 导航栏logo大小
+.navbar-logo > svg {
     display: inline-block;
     margin: 0 10px;
     width: 200px;
 }
 
+// 去除导航栏文字
 .navbar-brand > .text-uppercase {
     display: none;
+}
+
+// 文档侧边颜色
+#m-docs > span {
+    color: #333333;
+}
+
+.btn-rect {
+    border-radius: 6px!important;
+}
+
+.align-inline-left {
+    display: inline-block;
+    text-align: left;
 }
