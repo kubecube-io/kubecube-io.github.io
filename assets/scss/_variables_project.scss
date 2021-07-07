@@ -3,4 +3,31 @@
 Add styles or override variables from the theme here.
 
 */
+$primary: #F0F4FA;
+$secondary:  #FFFFFF;
 
+// -bg-landing-img { 
+// 	background-color: #F0F4FA!important;
+// }
+.nav-link {
+    color:#333333!important;
+}
+
+.td-search-input::placeholder {
+    color: #999FAA!important;
+    content: "xya"!important;
+}
+
+.td-overlay--dark::after {
+    background-color: #F0F4FA!important;
+}
+
+svg {
+    display: inline-block;
+    margin: 0 10px;
+    width: 200px;
+}
+
+.navbar-brand > .text-uppercase {
+    display: none;
+}
