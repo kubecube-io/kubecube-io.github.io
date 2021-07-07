@@ -9,12 +9,12 @@ weight: 6
 
 ## 创建 CRD
 
-选择租户和项目，选择集群和空间，选择自定义资源 CRD 菜单，进入自定义资源列表页面。点击创建自定义资源按钮可以以 YAML 的模式创建自定义资源 CRD。
+选择租户和项目，选择集群和空间，点击左侧【自定义资源 CRD】，进入自定义资源列表页面。点击【创建自定义资源】可以以 YAML 的模式创建自定义资源 CRD。
 
-![manage](/imgs/产品使用指南/K8s资源管理/工作负载管理/自定义资源CRD/manage.png)
+![manage](/imgs/user-guide/ns-scoped-res/workload/CRD/manage.png)
 
 ## 创建 CR
 
 在 CRD 列表页面，点击具体一条记录的版本，进入 CRD 关联的实例页面，可以管理和创建相应的 CR。
 
-![creatercr](/imgs/产品使用指南/K8s资源管理/工作负载管理/自定义资源CRD/createcr.png)
+![creatercr](/imgs/user-guide/ns-scoped-res/workload/CRD/createcr.png)

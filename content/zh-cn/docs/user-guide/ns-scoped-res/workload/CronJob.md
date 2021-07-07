@@ -13,7 +13,7 @@ weight: 4
 
 1、选择租户和项目，选择集群和空间，展开【工作负载】菜单，点击【CronJob】，进入 CronJob 管理页面。
 
-![部署CronJob](/imgs/产品使用指南/K8s资源管理/工作负载管理/CronJob/部署cronjob.png)
+![cronjob-apply](/imgs/user-guide/ns-scoped-res/workload/CronJob/cronjob-apply.png)
 
 2、点击【部署】，编写 CronJob 的 yaml 文件。点击【确定】，即可部署该 CronJob。
 
@@ -23,12 +23,12 @@ CronJob 的 规范可参考：https://v1-20.docs.kubernetes.io/docs/concepts/wor
 
 选择租户和项目，选择集群和空间，展开【工作负载】菜单，点击【CronJob】，进入  CronJob 管理页面。在管理页面，可以看到该命名空间下的所有 CronJob ，包括对应的名称、空间、状态、定时调度设置、正在运行的任务数以及创建时间。并可以在该界面对 CronJob 进行删除和修改操作。同时也可以根据名称对 CronJob 进行搜索。
 
-![CronJob管理页面](/imgs/产品使用指南/K8s资源管理/工作负载管理/CronJob/管理cronjob.png)
+![cronjob-manage](/imgs/user-guide/ns-scoped-res/workload/CronJob/cronjob-manage.png)
 
 ## 查看 CronJob 详情
 
 在 CronJob 管理页面，点击任一 CronJob 名称，即可进入到该 CronJob 详情页。
 
-![CronJob详情页](/imgs/产品使用指南/K8s资源管理/工作负载管理/CronJob/cronjob详情页.png)
+![cronjob-detail](/imgs/user-guide/ns-scoped-res/workload/CronJob/cronjob-detail.png)
 
 CronJob 详情页除了可以管理 CronJob，还可以查看 CronJob 的详细信息，根据状态过滤该 CronJob 关联的任务列表，以及查看该 CronJob 和该 CronJob 所关联的副本的事件。
