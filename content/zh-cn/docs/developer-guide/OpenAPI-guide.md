@@ -7,7 +7,7 @@ weight: 1
 
 登录KubeCube，在右上角的下拉菜单中找到【密钥管理】页面，可以在该页面管理您账户的访问密钥对。
 
-![密钥管理页面截图](/imgs/开发指南/OpenAPI使用指南/密钥管理页面截图.png)
+![key-manage](/imgs/developer-guide/openapi-guide/key-manage.png)
 
 > 若进入到该页面中无密钥则点击【添加密钥】按钮创建，最多可以创建5对密钥。
 
@@ -70,14 +70,18 @@ curl -X GET -H 'Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2
 
 ### 4、接口文档
 
-部署好 KubeCube 后，访问 http://localhost:8080/swagger/index.html#/ 即为 KubeCube 的接口文档，该接口文档描述了 KubeCube 中的部分接口。
+#### 访问 KubeCube 自研接口
 
-除此文档中的接口，如果需要访问 Kubernetes 资源，接口文档如下：
+点击【开发指南】-【自研接口文档】，该接口文档描述了 KubeCube 的自研接口。
+
+#### 访问 Kubernetes 资源
+
+访问 Kubernetes 原生资源的接口文档如下：
 
 **请求url**：
 
 ```
-/api/v1/cube/proxy/clusters/{clusterName}/*url?selector=&pageSize=&pageNum=&sortName=&sortOrder=sortFunc=
+https://{管控节点IP}:30443/api/v1/cube/proxy/clusters/{clusterName}/*url?selector=&pageSize=&pageNum=&sortName=&sortOrder=sortFunc=
 ```
 
 - `*url`指的是直接调用 Kubernetes 时的接口，
@@ -115,7 +119,7 @@ GET /apis/apps/v1/namespaces/{namespace}/deployments
 2、因此， KubeCube 查询 deployment 的对应接口为 
 
 ```
-GET /api/v1/cube/proxy/clusters/{clusterName}/apis/apps/v1/namespaces/{namespace}/deployments？sortName=CreationTimestamp&sortOrder=desc&pageSize=20&pageNum=2
+GET /api/v1/cube/proxy/clusters/{clusterName}/apis/apps/v1/namespaces/{namespace}/deployments?sortName=CreationTimestamp&sortOrder=desc&pageSize=20&pageNum=2
 ```
 
 3、使用 token 访问则为：
@@ -123,5 +127,36 @@ GET /api/v1/cube/proxy/clusters/{clusterName}/apis/apps/v1/namespaces/{namespace
 ```linux
 curl -X GET -H 'Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c2VybmFtZSI6ImFkbWluIiwiZ3JvdXBzIjpbImt1YmVjdWJlIl19LCJleHAiOjE2MjQ2MTY3MjZ9.FCfuVzADMAgYeOm39Wlhs-3B6kW-Z6bZ9js1lKoNub0' https://kubecube.com/api/v1/cube/proxy/clusters/pivot-cluster/apis/apps/v1/namespaces/namespaceA/deployments?sortName=metadata.creationTimestamp&sortOrder=desc&pageSize=20&pageNum=2 -k
 ```
+
+##### 访问 CRD 资源
+
+访问 CRD 资源的接口文档如下：
+
+**请求url**：
+
+```
+https://{管控节点IP}:30443/api/v1/cube/proxy/clusters/{clusterName}/apis/{CRDGroup}/v1/{CRDKinds}/*url?selector=&pageSize=&pageNum=&sortName=&sortOrder=sortFunc=
+```
+参数含义同上。
+
+**请求示例**
+
+如果需要查询"pivot-cluster"集群里的租户列表，则对应接口为：
+
+```
+GET /api/v1/cube/proxy/clusters/pivot-cluster/apis/tenant.kubecube.io/v1/tenants
+```
+
+使用 token 访问则为：
+
+```linux
+curl -X GET -H 'Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c2VybmFtZSI6ImFkbWluIiwiZ3JvdXBzIjpbImt1YmVjdWJlIl19LCJleHAiOjE2MjQ2MTY3MjZ9.FCfuVzADMAgYeOm39Wlhs-3B6kW-Z6bZ9js1lKoNub0' https://kubecube.com/api/v1/cube/proxy/clusters/pivot-cluster/apis/tenant.kubecube.io/v1/tenants -k
+```
+
+
+
+
+
+
 
 

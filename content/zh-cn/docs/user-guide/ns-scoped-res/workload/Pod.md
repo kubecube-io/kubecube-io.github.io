@@ -15,4 +15,4 @@ weight: 5
 
 同时也可以根据名称对列表进行搜索，或对单个 pod 进行查看和删除。
 
-![管理pod](/imgs/产品使用指南/K8s资源管理/工作负载管理/Pod/管理pod.png)
+![pod-manage](/imgs/user-guide/ns-scoped-res/workload/Pod/pod-manage.png)

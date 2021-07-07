@@ -15,9 +15,9 @@ weight: 2
 
 1、使用平台管理员账号登录 KubeCube，展开【组织管理】菜单，点击【租户管理】，进入租户管理页面。
 
-![租户管理](/imgs/产品使用指南/运维管理功能/租户管理/租户管理.png)
-
 2、点击【新增租户】，填写租户信息。
+
+![tenant-manage](/imgs/user-guide/administration/tenant/add-tenant.png)
 
 - 租户名称：平台内展示的租户名。
 - 租户标识：
@@ -31,13 +31,13 @@ weight: 2
 
 同时可以在该界面快捷添加成员、添加项目、修改租户名称。
 
-
+![tenant-manage](/imgs/user-guide/administration/tenant/tenant-manage.png)
 
 ## 项目管理
 
-![租户管理](/imgs/产品使用指南/运维管理功能/租户管理/项目管理.png)
-
 在租户管理页面点击上方的【项目】，切换到项目管理页面。
+
+![project-manage](/imgs/user-guide/administration/tenant/project-manage.png)
 
 点击【新增项目】，即可添加项目：
 
@@ -55,7 +55,7 @@ weight: 2
 
 在租户管理页面点击上方的到【成员】，切换到成员管理页面。
 
-![租户管理](/imgs/产品使用指南/运维管理功能/租户管理/成员管理.png)
+![member-manage](/imgs/user-guide/administration/tenant/member-manage.png)
 
 点击【添加成员】，即可为指定的租户或项目添加成员。
 

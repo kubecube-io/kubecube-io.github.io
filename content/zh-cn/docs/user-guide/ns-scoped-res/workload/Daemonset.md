@@ -13,7 +13,7 @@ weight: 7
 
 1、选择租户和项目，选择集群和空间，展开【工作负载】菜单，点击 【DaemonSets】，进入 DaemonSet 管理页面。
 
-![部署daemonset](/imgs/产品使用指南/K8s资源管理/工作负载管理/DaemonSet/部署daemonset.png)
+![daemonset-apply](/imgs/user-guide/ns-scoped-res/workload/DaemonSet/daemonset-apply.png)
 
 2、点击【部署】，编写 daemonSet 的 yaml 文件。点击【确定】，即开始部署该 daemonSet。
 
@@ -27,12 +27,12 @@ daemonSet 的 规范可参考：https://v1-20.docs.kubernetes.io/zh/docs/concept
 
 同时也可以根据名称对列表进行搜索，或对单个 daemonSet 进行删除或修改。
 
-![管理daemonset](/imgs/产品使用指南/K8s资源管理/工作负载管理/DaemonSet/管理daemonset.png)
+![daemonset-manage](/imgs/user-guide/ns-scoped-res/workload/DaemonSet/daemonset-manage.png)
 
 ## 查看 DaemonSet 详情
 
 在 DaemonSet 管理页面，点击任一 daemonSet 名称，可进入到该 daemonSet 详情页。
 
-![daemonSet详情页](/imgs/产品使用指南/K8s资源管理/工作负载管理/DaemonSet/daemonset详情页.png)
+![daemonset-detail](/imgs/user-guide/ns-scoped-res/workload/DaemonSet/daemonset-detail.png)
 
 在 DaemonSet 详情页，可以查看到 daemonSet 的具体信息，以及该 daemonSet 所关联的所有副本的详情、副本的监控数据以及该 daemonSet 和副本的事件信息和 condition 信息。
