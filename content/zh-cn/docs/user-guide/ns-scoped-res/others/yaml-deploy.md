@@ -13,7 +13,7 @@ weight: 2
 
 选择租户和项目，选择集群和空间，点击【 YAML 编排】 菜单，弹出 YAML 编排界面。
 
-![yaml](/imgs/产品使用指南/K8s资源管理/其他/Yaml编排/yamlcreate.png)
+![yamlcreate.png](/imgs/user-guide/ns-scoped-res/others/yaml-deploy/yamlcreate.png)
 
 填写要创建的资源的 YAML 格式定义，或者从文件导入，或者从已有资源导入，编辑完成后点击【确定】完成 YAML 编排。
 

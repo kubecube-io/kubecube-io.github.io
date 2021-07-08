@@ -10,9 +10,9 @@ weight: 1
 
 ## 管理密钥
 
-用户登录后，鼠标移动到右上角用户名称，在下拉菜单中选择密钥管理，进入密钥管理页面。在密钥管理页面可以添加密钥、删除密钥和查看密钥信息。
+用户登录后，鼠标移动到右上角用户名称，在下拉菜单中点击【密钥管理】，进入密钥管理页面。在密钥管理页面可以添加密钥、删除密钥和查看密钥信息。
 
-![keymanage](/imgs/产品使用指南/K8s资源管理/其他/密钥管理/keymanage.png)
+![keymanage.png](/imgs/user-guide/ns-scoped-res/others/key-manage/keymanage.png)
 
 ## 使用密钥
 
