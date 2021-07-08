@@ -15,11 +15,11 @@ Kubernetes Secret 用于存储和管理一些敏感数据，比如密码密钥�
 
 1、选择租户和项目，选择集群和空间，展开【配置】菜单，点击【Secret】菜单按钮，进入 Secret 管理页面。
 
-![manage.png](\imgs\user-guide\ns-scoped-res\config\secret\manage.png)
+![manage.png](/imgs/user-guide/ns-scoped-res/config/secret/manage.png)
 
 2、点击【创建 Secret】按钮，进入创建 Secret 页面，填写信息后，点击【立即创建】按钮，即可创建一个 Secret。
 
-![create.png](\imgs\user-guide\ns-scoped-res\config\secret\create.png)
+![create.png](/imgs/user-guide/ns-scoped-res/config/secret/create.png)
 
 - 名称：输入 Secret 名称。
 - 类型：
@@ -32,7 +32,7 @@ Kubernetes Secret 用于存储和管理一些敏感数据，比如密码密钥�
 
 在 Secret 管理页面，点击具体一条 Secret 记录的名称，进入详情页面查看 Secret 的详细信息。
 
-![detail.png](\imgs\user-guide\ns-scoped-res\config\secret\detail.png)
+![detail.png](/imgs/user-guide/ns-scoped-res/config/secret/detail.png)
 
  
 
