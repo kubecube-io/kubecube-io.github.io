@@ -5,7 +5,7 @@ weight: 2
 
 KubeCube 产品由 KubeCube Service、Warden、CloudShell和 AuditLog Server 等组件组成，除了 Warden 部署在各个 Kubernetes 集群充当认证代理，其余组件均部署在管理集群。下图描述的 KubeCube 整体产品架构，包括与用户的交互，与 Kubernetes API Server 交互，Prometheus 监控和网易轻舟自研日志采集组件。
 
-![architecture](/imgs/介绍/architecture.png)
+![architecture](/imgs/overview/architecture.png)
 
 - 用户可以通过 KubeCube UI、CLI 指令、Open API 访问 Kubecube 服务和 Kubernetes 资源，其中 CLI 功能主要由 CloudShell 组件提供。
 - KubeCube Service 实现统一认证服务，透传代理 Kubernetes 资源请求，和提供更丰富的资源请求扩展接口。KubeCube Servie 包含四个组件：Restful API Server 提供API支持，AuditLog 负责审计日志收集和发送审计日志到处理组件 KubeCube AuditLog Server，Controller Manager 实现资源的 Reconcile 和 Validate Webhook ，Scout 实现各个集群之间资源的同步。
