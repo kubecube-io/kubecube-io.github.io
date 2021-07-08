@@ -11,13 +11,13 @@ weight: 2
 
 ## 创建 Ingress
 
-1、选择租户和项目，选择集群和空间，展开服务与发现菜单，点击 Ingresses 菜单按钮，进入 Ingress 管理页面。
+1、选择租户和项目，选择集群和空间，展开【服务与发现】菜单，点击【Ingresses】菜单按钮，进入 Ingress 管理页面。
 
-![manage1](/imgs/产品使用指南/K8s资源管理/服务与发现/ingress/manage1.png)
+![manage.png](/imgs/user-guide/ns-scoped-res/service-discovery/ingress/manage.png)
 
-2、点击创建负载均衡按钮，进入创建负载均衡页面，填写信息后，点击立即创建按钮，即可创建一个 Ingress。
+2、点击【创建负载均衡】按钮，进入创建负载均衡页面，填写信息后，点击【立即创建】按钮，即可创建一个 Ingress。
 
-![craete](/imgs/产品使用指南/K8s资源管理/服务与发现/ingress/create.png)
+![create.png](/imgs/user-guide/ns-scoped-res/service-discovery/ingress/create.png)
 
 - 名称：输入 Ingress 名称
 
@@ -28,15 +28,15 @@ weight: 2
 
 ## 管理 Ingress
 
-选择租户和项目，选择集群和空间，展开服务与发现菜单，点击 Ingresses 菜单按钮，进入 Ingress 管理页面，可以对 Ingress 列表进行设置重编辑，删除和 Yaml 设置。
+选择租户和项目，选择集群和空间，展开【服务与发现】菜单，点击【Ingresses】菜单按钮，进入 Ingress 管理页面，可以对 Ingress 列表进行设置重编辑，删除和 Yaml 设置。
 
-![manage2](/imgs/产品使用指南/K8s资源管理/服务与发现/ingress/manage2.png)
+![manage.png](/imgs/user-guide/ns-scoped-res/service-discovery/ingress/manage.png)
 
 ## 查看 Ingress 详情
 
 在 Ingress 管理页面，点击具体一条 Ingress 记录的名称，进入详情页面。
 
-![ingressdetail](/imgs/产品使用指南/K8s资源管理/服务与发现/ingress/ingressdetail.png)
+![ingressdetail.png](/imgs/user-guide/ns-scoped-res/service-discovery/ingress/ingressdetail.png)
 
 Ingress 详情页面除了可以管理 Ingress，还可以查看 Ingress 的详细信息、关联的 Service 信息和事件信息。
 
