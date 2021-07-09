@@ -1,5 +1,7 @@
 # KubeCube docs
 
+[![License](https://img.shields.io/github/license/kubecube-io/kubecube-io.github.io)](https://github.com/kubecube-io/kubecube-io.github.io/blob/main/LICENSE)[![build](https://img.shields.io/github/workflow/status/kubecube-io/kubecube-io.github.io/github%20pages)](https://github.com/kubecube-io/kubecube-io.github.io/actions/workflows/gh-pages.yml)
+
 Welcome! This repository houses all the assets required to build the KubeCube website and documentation. We're pleased that you want to contribute! The website is hosted at [https://kubecube.io](https://kubecube.io).
 
 We use [Hugo](https://gohugo.io/) to format and generate our website, the [Docsy](https://github.com/google/docsy) theme for styling and site structure. Thanks!.
