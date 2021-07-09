@@ -22,9 +22,11 @@ weight: 1
 
 > 节点上若无容器运行时，部署脚本将自动安装 docker 19.03.12 作为容器运行时
 
+# Kubernetes 版本
+KubCube 支持的 k8s 版本为 1.19.0 ~ 1.21.0
+
 # 前置准备
 
-在使用部署脚本开始 KubeCube 的安装前，需要更新当前操作系统的包管理器的源
+在使用部署脚本开始 KubeCube 的安装时，脚本会检测环境，并提示需要安装缺失的依赖
 
-- **Ubuntu/Debian：**`apt update -y`
-- **CentOS：**`yum update -y`
+![env-check](static/imgs/installation-guide/requirement/env-check.png)

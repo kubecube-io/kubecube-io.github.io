@@ -48,9 +48,9 @@ KubeCube 针对不同的层级，内置了相应的管理员角色和只有读�
 
 通过角色标签栏来选择角色层级，点击【添加角色】来新建自定义角色，【继承已有】会以本层级的 admin 角色为模版新建出角色，【自定义】可以自定义编辑新角色
 
-![添加角色](/imgs/产品使用指南/运维管理功能/角色管理/添加角色.png)
+![add-role.png](/imgs/user-guide/administration/role/add-role.png)
 
 通过勾选具体的权限项来自定义角色的权限，点击【修改】提交修改
 
-![角色管理](/imgs/产品使用指南/运维管理功能/角色管理/角色管理.png)
+![mgr-role.png](/imgs/user-guide/administration/role/mgr-role.png)
 

@@ -10,6 +10,6 @@ weight: 2
 
 点击【集群管理】，选择需要查看的集群，点击【持久存储】来查看 PersistentVolume 详情，点击【删除】可以删除该资源
 
-![pv](/imgs/产品使用指南/运维管理功能/K8s集群管理/集群级资源管理/PV/pv.png)
+![pv](/imgs/user-guide/administration/k8s-cluster/cluster-scoped-res/PV/pv.png)
 
-![pv-view](/imgs/产品使用指南/运维管理功能/K8s集群管理/集群级资源管理/PV/pv-view.png)
+![pv-view](/imgs/user-guide/administration/k8s-cluster/cluster-scoped-res/PV/pv-view.png)

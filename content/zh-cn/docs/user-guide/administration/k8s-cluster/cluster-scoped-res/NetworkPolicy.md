@@ -10,10 +10,10 @@ weight: 4
 
 点击【集群管理】，选择要操作的集群，点击【网络策略】，点击【查看详情】可以查看 NetworkPolicy 的详细描述，点击【设置】可以对 NetworkPolicy 进行修改，点击【删除】可以删除该资源
 
-![view-networkpolicy](/imgs/产品使用指南/运维管理功能/K8s集群管理/集群级资源管理/NetworkPolicy/view-networkpolicy.png)
+![view-networkpolicy](/imgs/user-guide/administration/k8s-cluster/cluster-scoped-res/NetworkPolicy/view-networkpolicy.png)
 
 ## 创建 NetworkPolicy
 
 点击【创建网络策略】可以创建新的 NetworkPolicy
 
-![create-networkpolicy](/imgs/产品使用指南/运维管理功能/K8s集群管理/集群级资源管理/NetworkPolicy/create-networkpolicy.png)
+![create-networkpolicy](/imgs/user-guide/administration/k8s-cluster/cluster-scoped-res/NetworkPolicy/create-networkpolicy.png)

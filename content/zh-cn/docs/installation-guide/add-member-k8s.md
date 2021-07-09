@@ -117,8 +117,8 @@ todo
 
 ## 等待集群添加完成
 
-![add-cluster](/imgs/部署指南/添加计算集群/add-cluster.png)
+![add-cluster](/imgs/installation-guide/add-member-k8s/add-cluster.png)
 
 ## 在 console 中确认新集群
 
-![check-cluster](/imgs/部署指南/添加计算集群/check-cluster.png)
+![check-cluster](/imgs/installation-guide/add-member-k8s/check-cluster.png)
