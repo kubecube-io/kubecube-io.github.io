@@ -29,4 +29,4 @@ KubCube 支持的 k8s 版本为 1.19.0 ~ 1.21.0
 
 在使用部署脚本开始 KubeCube 的安装时，脚本会检测环境，并提示需要安装缺失的依赖
 
-![env-check](static/imgs/installation-guide/requirement/env-check.png)
+![env-check](/imgs/installation-guide/requirement/env-check.png)
