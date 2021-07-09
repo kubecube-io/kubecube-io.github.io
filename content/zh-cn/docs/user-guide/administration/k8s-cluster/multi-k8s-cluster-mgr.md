@@ -11,19 +11,19 @@ KubeCube 提供多集群管理的能力，可以基于管控集群添加或者�
 
 选择集群查看对应的基本信息，Node、StorageClass、NetworkPolicy 以及 PV
 
-![cluster-inspect](/imgs/产品使用指南/运维管理功能/K8s集群管理/多集群管理/cluster-inspect.png)
+![cluster-inspect](/imgs/user-guide/administration/k8s-cluster/multi-k8s-cluster-mgr/cluster-inspect.png)
 
 ## 添加计算集群
 
-[在节点上构建新集群并添加](https://kubecube.io/docs/部署指南/添加计算集群/#在节点上构建新集群并添加)
+[在节点上构建新集群并添加](https://www.kubecube.io/docs/installation-guide/add-member-k8s/#在节点上构建新集群并添加)
 
-[添加已有集群](https://kubecube.io/docs/部署指南/添加计算集群/#添加已有集群)
+[添加已有集群](https://www.kubecube.io/docs/installation-guide/add-member-k8s/#添加已有集群)
 
 ## 删除计算集群
 
 点击【删除配置】来删除计算集群，管控集群无法通过 Console 删除。删除计算集群意味着 KubeCube 控制面不再接管该集群，该集群恢复被接管前的样子，集群上运行的工作负载、服务等不会受到影响，可以通过添加该集群来重新接管
 
-![cluster-manager](/imgs/产品使用指南/运维管理功能/K8s集群管理/多集群管理/cluster-manager.png)
+![cluster-manager](/imgs/user-guide/administration/k8s-cluster/multi-k8s-cluster-mgr/cluster-manager.png)
 
 
 
