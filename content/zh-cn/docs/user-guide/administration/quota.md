@@ -8,7 +8,7 @@ KubeCube 在 Kubernetes 原生的资源配额能力上进行了拓展，在租�
 > KubeCube 目前支持对 nvidia gpu 进行资源配额
 
 ## 资源配额结构
-![资源配额](/imgs/产品使用指南/运维管理功能/配额管理/资源配额.png)
+![resourcequota.png](/imgs/user-guide/administration/quota/resourcequota.png)
 
 资源配额的计算结构遵循以下约束：
 
@@ -26,14 +26,14 @@ KubeCube 在 Kubernetes 原生的资源配额能力上进行了拓展，在租�
 
 选择租户，点击【调整配额】对指定集群下的租户进行资源配额的设置
 
-![租户配额.png](/imgs/产品使用指南/运维管理功能/配额管理/租户配额.png)
+![tenant-quota.png](/imgs/user-guide/administration/quota/tenant-quota.png)
 
 在可填框中填入期望设置的资源配额，点击【确定】保存配额设置
 
 - 【集群可分配】表示该集群剩余可分配资源
 - 【租户已分配】表示该租户下所有 namespace 已分配的资源总和
 
-![调整租户配额.png](/imgs/产品使用指南/运维管理功能/配额管理/调整租户配额.png)
+![modify-tenant-quota.png](/imgs/user-guide/administration/quota/modify-tenant-quota.png)
 
 ## 创建 Namespace 并设置资源配额
 
@@ -44,11 +44,11 @@ KubeCube 在 Kubernetes 原生的资源配额能力上进行了拓展，在租�
 
 点击右上方【租户】选择框，选择租户，点击【创建空间】创建新的 namespace 并设置资源配额，也可以点击【修改】对已创建的 namespace 的资源配额进行修改
 
-![空间配额.png](/imgs/产品使用指南/运维管理功能/配额管理/空间配额.png)
+![ns-quota.png](/imgs/user-guide/administration/quota/ns-quota.png)
 
 创建 namespace 时，需要选择空间所属的集群、租户、项目，namespace 一旦创建，其所属关系不能更改。在可填框中填入期望的资源配额，点击【确定】使资源配额生效
 
 【租户可分配】表示该 namespace 所属的租户所剩的可分配资源配额
 
-![调整空间配额.png](/imgs/产品使用指南/运维管理功能/配额管理/调整空间配额.png)
+![modify-ns-quota.png](/imgs/user-guide/administration/quota/modify-ns-quota.png)
 

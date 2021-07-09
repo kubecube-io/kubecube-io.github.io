@@ -149,10 +149,10 @@ ACCESS_PRIVATE_KEY_PATH="/root/.ssh/id_rsa"
 ## 等待部署完成
 KubeCube 部署完成后，请根据提示信息登陆 console 管理页面
 
-![complete-deploy](/imgs/部署指南/All-In-One/complete-deploy.png)
+![complete-deploy](/imgs/installation-guide/All-In-One/complete-deploy.png)
 
 ## 使用 admin 账户登陆 console
 
 ⚠️请在登陆后修改 admin 用户的密码
 
-![login-console](/imgs/部署指南/All-In-One/login-console.png)
+![login-console](/imgs/installation-guide/All-In-One/login-console.png)
