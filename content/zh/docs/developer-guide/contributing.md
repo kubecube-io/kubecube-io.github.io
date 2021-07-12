@@ -3,7 +3,7 @@ title: "参与贡献"
 weight: 3
 ---
 
-Welcome to KubeCube community!  If you are looking for information on how to join us, you are in the right place. We encourage you to help out by reporting issues, improving documentation, fixing bugs, or adding new features. Every contribution is precious for KubeCube.
+Welcome to KubeCube community! If you are looking for information on how to join us, you are in the right place. We encourage you to help out by reporting issues, improving documentation, fixing bugs, or adding new features. Every contribution is precious for KubeCube.
 
 ## Reporting issues
 To be honest, we regard every user of KubeCube as a very kind contributor. After experiencing KubeCube, you may have some feedback for the project. Then feel free to open an issue.
