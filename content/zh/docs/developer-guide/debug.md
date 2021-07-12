@@ -62,7 +62,7 @@ make docker-build-cube IMG={image-tag}
 make docker-build-wardeb IMG={image-tag}
 ```
 
-使用构建完成的镜像替换对应 deployment 中的镜像
+使用构建完成的镜像替换对应 deployment 中的镜像，并使用 `kubectl logs` 进行 debug
 
 
 
