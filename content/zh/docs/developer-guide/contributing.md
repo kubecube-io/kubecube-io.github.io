@@ -10,16 +10,16 @@ To be honest, we regard every user of KubeCube as a very kind contributor. After
 
 There are lot of cases when you could open an issue:
 
-bug report
-feature request
-performance issues
-feature proposal
-feature design
-help wanted
-doc incomplete
-test improvement
-any questions on project
-and so on
+- bug report
+- feature request
+- performance issues
+- feature proposal
+- feature design
+- help wanted
+- doc incomplete
+- test improvement
+- any questions on project
+- ...
 
 Also we must remind that when filing a new issue, please remember to remove the sensitive data from your post. Sensitive data could be password, secret key, network locations, private business data and so on.
 
