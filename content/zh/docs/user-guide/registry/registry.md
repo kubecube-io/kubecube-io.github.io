@@ -1,9 +1,10 @@
 ---
-title: "Harbor 集成"
+title: "镜像仓库"
 weight: 1
 ---
 
-本文详述了如何在 KubeCube 接管的集群中，集成 Harbor
+KubeCube 支持主流的镜像仓库，如 registry.cn-hangzhou.aliyuncs.com，docker.io，hub.c.163.com 等，同时也支持私有仓库，KubeCube
+推荐使用社区主流的 Harbor 进行私有仓库的搭建，下文详述了在 KubeCube 中部署 Harbor 的方法
 
 ## 安装 helm3
 
