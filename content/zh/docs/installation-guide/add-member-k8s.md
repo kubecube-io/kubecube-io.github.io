@@ -12,7 +12,10 @@ KubeCube 可以添加其它集群作为计算集群，前提是，计算集群�
 ### 开始安装
 
 ```bash
-export CUSTOMIZE="true";curl -fsSL https://gitee.com/kubecube/manifests/raw/master/entry.sh | bash
+KUBECUBE_VERSION=v1.0.0
+```
+```bash
+export CUSTOMIZE="true";curl -fsSL https://kubecube.nos-eastchina1.126.net/kubecube-installer/${KUBECUBE_VERSION}/entry.sh | bash
 ```
 
 ### 设置安装脚本参数
