@@ -20,10 +20,10 @@ weight: 2
 
 ![create-alertrule](/imgs/user-guide/alerting/create-alertrule.png)
 
-- 告警名称
+- 告警名称: 告警规则名称
 - 表达式：promql表达式，具体配置方式请参考[prometheus文档](https://prometheus.io/docs/prometheus/latest/querying/basics/)
 - 持续时间：代表告警规则表达式持续被触发的时长，如果达到该期望时间，就触发一条告警。
-- 告警程度
+- 告警程度：告警程度信息
 - 通知策略组：选择告警触发后需要通知的联系人与相应的通知策略。
 - 告警描述信息: 告警触发后发送的告警描述信息，具体配置方式请参考[Prometheus告警规则模版配置](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/#templating)
 

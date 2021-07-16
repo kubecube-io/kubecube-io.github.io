@@ -11,7 +11,7 @@ weight: 1
 
 ## 联系人管理
 
-> 推荐在一个告警通知策略内配置多个联系人，代表一个联系人组信息，而不是为每个联系人都创建一个通知策略。
+> 推荐在一个告警通知策略内配置多个联系人，代表联系人组信息，而不是为每个联系人都创建一个通知策略。
 
 1. 登录到 KubeCube 控制台，选择租户项目后，侧边栏展开【告警】菜单，选择【告警策略组】，并点击创建.
 
@@ -23,42 +23,43 @@ weight: 1
 
 ![create-amc-email](/imgs/user-guide/alerting/create-amc-email.png)
 
-- 是否接收告警恢复通知：代表当告警规则不再触发后，是否发送通知。
+- 是否接收告警恢复通知
 - 收件人: 收件人的邮箱地址
 - 更多配置：
 注意：以下配置默认使用集群全局配置，可以询问集群管理员获知。
   - smarthost: 邮箱服务器域名和端口信息，e.g. imap.163.com:465
-  - requireTLS: 是否需要启用TLS
   - from: 发件人邮箱
   - authUsername: 邮件服务器认证用户名
-  - authPassword: 邮件服务器认证密码，需要提前创建一个Secret，再指定name和key
-    - name: 已创建的Secret的名称
-    - key: 已创建的Secret的key
+  - authPassword: 邮件服务器认证密码，需要提前在项目空间(kubecube-project-<project-name>)创建一个Secret，再指定Secret和key
+    - Secret: 选择已创建的Secret的名称
+    - key: 选择指定Secret的key
+
 更多配置请参考[EmailConfig](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/api.md#emailconfig)
 
 #### WeChat配置
 ![create-amc-wechat](/imgs/user-guide/alerting/create-amc-wechat.png)
-- 是否接收告警恢复通知：代表当告警规则不再触发后，是否发送通知。
-- toUser: 企业微信用户名
-- toParty: 企业微信用户组
-- toTag: 企业微信用户标签
+- 是否接收告警恢复通知
+- toUser: 接收告警通知的企业微信用户名
+- toParty: 接收告警通知的企业微信用户组
+- toTag: 接收告警通知的企业微信用户标签
 - 更多配置：
 注意：以下配置默认使用集群全局配置，可以询问集群管理员获知。
   - apiURL: 微信第三方通知的apiURL
   - corpID: 企业微信账号唯一 ID，可以在我的企业中查看。
   - agentID: 第三方企业应用的 ID，可以在已创建的第三方企业应用详情页面查看。
-  - apiSecret: 需要根据第三方企业应用的密钥，提前创建一个Secret，再指定name和key
-    - name: 已创建的Secret的名称
-    - key: 已创建的Secret的key
+  - apiSecret: 需要根据第三方企业应用的密钥，提前在项目空间(kubecube-project-<project-name>)创建一个Secret，再指定Secret和key
+    - Secret: 选择已创建的Secret的名称
+    - key: 选择指定Secret的key
 
 更多配置请参考[企业微信文档](https://work.weixin.qq.com/api/doc/#10167/%E6%96%87%E6%9C%AC%E6%B6%88%E6%81%AF)以及[WeChatConfig](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/api.md#wechatconfig)。
 
 
 #### Webhook配置
 ![create-amc-webhook](/imgs/user-guide/alerting/create-amc-webhook.png)
-- 是否接收告警恢复通知：代表当告警规则不再触发后，是否发送通知。
+- 是否接收告警恢复通知
 - url: Webhook的url，用来接受HTTP POST请求
 - max_alerts: Alertmanager一次发往webhook通知中，包含告警的最大数量，当超过该值，告警会被截断，默认为全部发送。
+
 更多配置参考[WebhookConfig](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/api.md#webhookconfig)
 
 
