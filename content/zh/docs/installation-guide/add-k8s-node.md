@@ -10,7 +10,15 @@ KubeCube 提供为已有集群添加节点的能力
 在新节点上执行部署脚本
 
 ```bash
-export CUSTOMIZE="true";curl -fsSL https://gitee.com/kubecube/manifests/raw/master/entry.sh | bash
+KUBECUBE_VERSION=v1.0.0
+```
+```bash
+export CUSTOMIZE="true";curl -fsSL https://kubecube.nos-eastchina1.126.net/kubecube-installer/${KUBECUBE_VERSION}/entry.sh | bash
+```
+
+tip: 你可以通过预先下载离线包和镜像来减少部署时间
+```bash
+export PRE_DOWNLOAD="true";curl -fsSL https://kubecube.nos-eastchina1.126.net/kubecube-installer/${KUBECUBE_VERSION}/entry.sh | bash
 ```
 
 设置脚本参数，并按照提示继续运行安装脚本并等待新节点加入集群
@@ -87,7 +95,10 @@ ACCESS_PRIVATE_KEY_PATH="/root/.ssh/id_rsa"
 在新节点上执行部署脚本
 
 ```bash
-export CUSTOMIZE="true";curl -fsSL https://gitee.com/kubecube/manifests/raw/master/entry.sh | bash
+KUBECUBE_VERSION=v1.0.0
+```
+```bash
+export CUSTOMIZE="true";curl -fsSL https://kubecube.nos-eastchina1.126.net/kubecube-installer/${KUBECUBE_VERSION}/entry.sh | bash
 ```
 
 设置脚本参数，并按照提示继续运行安装脚本并等待新节点加入 control-plane

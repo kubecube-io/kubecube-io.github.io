@@ -12,7 +12,10 @@ weight: 2
 在 Linux 机器上执行部署脚本
 
 ```bash
-curl -fsSL https://gitee.com/kubecube/manifests/raw/master/entry.sh | bash
+KUBECUBE_VERSION=v1.0.0
+```
+```bash
+curl -fsSL https://kubecube.nos-eastchina1.126.net/kubecube-installer/${KUBECUBE_VERSION}/entry.sh | bash
 ```
 
 ## 在 Kubernetes 集群中部署 KubeCube
@@ -70,7 +73,10 @@ spec:
 在 Linux 机器上执行部署脚本
 
 ```bash
-export CUSTOMIZE="true";curl -fsSL https://gitee.com/kubecube/manifests/raw/master/entry.sh | bash
+KUBECUBE_VERSION=v1.0.0
+```
+```bash
+export CUSTOMIZE="true";curl -fsSL https://kubecube.nos-eastchina1.126.net/kubecube-installer/${KUBECUBE_VERSION}/entry.sh | bash
 ```
 
 ### 设置安装脚本参数
