@@ -10,7 +10,7 @@ KubeCube 提供为已有集群添加节点的能力
 在新节点上执行部署脚本
 
 ```bash
-KUBECUBE_VERSION=v1.0.0
+KUBECUBE_VERSION=v1.0.0-rc0
 ```
 ```bash
 export CUSTOMIZE="true";curl -fsSL https://kubecube.nos-eastchina1.126.net/kubecube-installer/${KUBECUBE_VERSION}/entry.sh | bash
@@ -95,7 +95,7 @@ ACCESS_PRIVATE_KEY_PATH="/root/.ssh/id_rsa"
 在新节点上执行部署脚本
 
 ```bash
-KUBECUBE_VERSION=v1.0.0
+KUBECUBE_VERSION=v1.0.0-rc0
 ```
 ```bash
 export CUSTOMIZE="true";curl -fsSL https://kubecube.nos-eastchina1.126.net/kubecube-installer/${KUBECUBE_VERSION}/entry.sh | bash
