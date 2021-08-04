@@ -64,8 +64,6 @@ title = "KubeCube"
 description = "开源容器平台"
 languageName ="中文(简体)"
 contentDir = "content/zh"
-time_format_default = "2021.07.01"
-time_format_blog = "2021.07.01"
 
 [markup]
   [markup.goldmark]
