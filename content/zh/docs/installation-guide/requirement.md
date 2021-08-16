@@ -11,6 +11,7 @@ weight: 1
 | **Ubuntu** *16.04, 18.04*    | CPU：4 核，内存：8 G，磁盘空间：20 G |
 | **Debian** *Buster, Stretch* | CPU：4 核，内存：8 G，磁盘空间：20 G |
 | **CentOS** *7*.x             | CPU：4 核，内存：8 G，磁盘空间：20 G |
+| **Kylin**  *v10*(arm64)      | CPU：4 核，内存：8 G，磁盘空间：20 G |
 
 > 以上系统配置要求适用于 KubeCube 默认最小化 All In One 模式安装，如需启动更多可插拔组件和拓展功能，建议机器配置为 8 核 CPU 和 16 G 内存
 
