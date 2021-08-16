@@ -1,9 +1,9 @@
 ---
 title: "告警规则管理"
-weight: 2
+weight: 4
 ---
 
-本文档介绍了如何在 KubeCube 中管理告警规则。
+本文档介绍了如何在 KubeCube 中管理**项目级**告警规则。
 
 
 ## 准备工作
@@ -12,8 +12,7 @@ weight: 2
 2. 创建告警通知策略
 
 ## 告警规则管理
-
-### 创建告警规则
+#### 创建告警规则
 
 1. 登录到 KubeCube 控制台，选择租户项目后，侧边栏展开【告警】菜单，选择【告警规则】，并点击创建.
 2. 填写告警规则基本信息：
@@ -27,7 +26,7 @@ weight: 2
 - 通知策略组：选择告警触发后需要通知的联系人与相应的通知策略。
 - 告警描述信息: 告警触发后发送的告警描述信息，具体配置方式请参考[Prometheus告警规则模版配置](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/#templating)
 
-### 告警状态查询
+#### 告警状态查询
 ![list-alertrule](/imgs/user-guide/alerting/list-alertrule.png)
 
 在告警规则列表页面，可以查看项目下所有告警规则的状态，状态包含以下三种：
