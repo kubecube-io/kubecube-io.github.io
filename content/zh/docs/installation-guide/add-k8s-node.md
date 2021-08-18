@@ -57,10 +57,6 @@ CONTROL_PLANE_ENDPOINT="" #{ip}:{port} , dns
 # master ip means master node ip of cluster
 MASTER_IP="10.173.32.4"
 
-# local ip mean node ip self, will equal to master ip
-# when NODE_MODE="master" or "control-plane-master"
-LOCAL_IP="10.173.32.7"
-
 # +optional
 # KUBECUBE_HOST must be set when as a member cluster to
 # join pivot cluster, the value is pivot node ip
@@ -72,7 +68,7 @@ KUBECUBE_HOST=""
 ZONE="cn"
 
 # k8s version you want to install
-KUBERNETES_VERSION="1.19.0"
+KUBERNETES_VERSION="1.20.9"
 
 # +optional
 # the user who can access master node, it can be empty
@@ -138,10 +134,6 @@ CONTROL_PLANE_ENDPOINT="10.173.32.10" #{ip}:{port} , dns
 # master ip means master node ip of cluster
 MASTER_IP="10.173.32.4"
 
-# local ip mean node ip self, will equal to master ip
-# when NODE_MODE="master" or "control-plane-master"
-LOCAL_IP="10.173.32.5"
-
 # +optional
 # KUBECUBE_HOST must be set when as a member cluster to
 # join pivot cluster, the value is pivot node ip
@@ -153,7 +145,7 @@ KUBECUBE_HOST=""
 ZONE="cn"
 
 # k8s version you want to install
-KUBERNETES_VERSION="1.19.0"
+KUBERNETES_VERSION="1.20.9"
 
 # +optional
 # the user who can access master node, it can be empty

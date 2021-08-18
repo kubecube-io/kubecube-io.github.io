@@ -1,6 +1,6 @@
 ---
-title: "添加计算集群"
-weight: 3
+title: "部署计算集群"
+weight: 4
 ---
 
 KubeCube 可以添加其它集群作为计算集群，前提是，计算集群能够访问管控集群的 k8s api-server 和 KubeCube，默认情况下 KubeCube 使用 NodePort 对外暴露服务，用户可自行使用 ingress 进行暴露
@@ -31,8 +31,6 @@ INSTALL_KUBERNETES="true"
 MEMBER_CLUSTER_NAME="member-1"
 
 MASTER_IP="${node ip}"
-
-LOCAL_IP="${node ip}"
 
 KUBECUBE_HOST="${pivot node ip}"
 
@@ -70,10 +68,6 @@ CONTROL_PLANE_ENDPOINT="" #{ip}:{port} , dns
 # master ip means master node ip of cluster
 MASTER_IP="x.x.x.x"
 
-# local ip mean node ip self, will equal to master ip
-# when NODE_MODE="master" or "control-plane-master"
-LOCAL_IP="x.x.x.x"
-
 # +optional
 # KUBECUBE_HOST must be set when as a member cluster to
 # join pivot cluster, the value is pivot node ip
@@ -85,7 +79,7 @@ KUBECUBE_HOST="y.y.y.y"
 ZONE="cn"
 
 # k8s version you want to install
-KUBERNETES_VERSION="1.19.0"
+KUBERNETES_VERSION="1.20.9"
 
 # +optional
 # the user who can access master node, it can be empty
