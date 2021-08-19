@@ -5,6 +5,8 @@ weight: 5
 
 KubeCube 提供为已有集群添加节点的能力
 
+⚠️ 注意 node 机器需要能够通过 ssh 访问 master 机器，支持公钥和密码两种 ssh 方式，执行脚本前可以在 node 上 ssh 到 master 测试连通性
+
 ## 向集群添加工作节点
 
 在新节点上执行部署脚本
