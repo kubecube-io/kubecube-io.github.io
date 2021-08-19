@@ -1,13 +1,13 @@
 ---
-title: "部署计算集群"
+title: "添加计算集群"
 weight: 4
 ---
 
 KubeCube 可以添加其它集群作为计算集群，前提是，计算集群能够访问管控集群的 k8s api-server 和 KubeCube，默认情况下 KubeCube 使用 NodePort 对外暴露服务，用户可自行使用 ingress 进行暴露
 
-## 在节点上构建新集群并添加
+## 方式一：部署新集群并添加
 
-在新节点上，需要构建 Kubernetes 集群并安装 KubeCube 依赖项
+在 linux 机器上，需要构建 Kubernetes 集群并安装 KubeCube 依赖项
 
 ### 开始安装
 
@@ -34,6 +34,7 @@ MASTER_IP="${node ip}"
 
 KUBECUBE_HOST="${pivot node ip}"
 
+> MEMBER_CLUSTER_NAME 表示计算集群的名字，注意，不能与已有的计算集群名称同名
 > ${node ip} 表示你运行脚本所在 node 机器的 ip，该 node 需要可操作 kubectl
 > ${pivot node ip} 表示管控集群 node 机器的 ip，用于向 KubeCube 注册集群
 
@@ -97,13 +98,13 @@ ACCESS_PASSWORD=""
 ACCESS_PRIVATE_KEY_PATH="/root/.ssh/id_rsa"
 ```
 
-## 添加已有集群
+## 方式二：纳管已有集群
 
 添加已有集群需要从 console 页面获取添加集群的定制脚本
 
-### 在 console 页面中进行添加
+### 在 console 页面中获取添加集群的脚本
 
-todo
+![add-member-cluster](/imgs/installation-guide/add-member-k8s/add-member-cluster.png)
 
 ### 使用脚本添加集群
 在集群的 node 机器上，使用从 console 中下载的脚本，该机器需要能够执行 kubectl
