@@ -15,9 +15,9 @@ KubeCube 提供多集群管理的能力，可以基于管控集群添加或者�
 
 ## 添加计算集群
 
-[在节点上构建新集群并添加](https://www.kubecube.io/docs/installation-guide/add-member-k8s/#方式一在机器上构建新集群并添加)
+[部署新集群并添加](https://www.kubecube.io/docs/installation-guide/add-member-k8s/#方式一部署新集群并添加)
 
-[添加已有集群](https://www.kubecube.io/docs/installation-guide/add-member-k8s/#方式二接管已有集群)
+[纳管已有集群](https://www.kubecube.io/docs/installation-guide/add-member-k8s/#方式二纳管已有集群)
 
 ## 删除计算集群
 

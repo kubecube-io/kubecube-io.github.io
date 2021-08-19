@@ -5,7 +5,7 @@ weight: 4
 
 KubeCube 可以添加其它集群作为计算集群，前提是，计算集群能够访问管控集群的 k8s api-server 和 KubeCube，默认情况下 KubeCube 使用 NodePort 对外暴露服务，用户可自行使用 ingress 进行暴露
 
-## 方式一：在机器上构建新集群并添加
+## 方式一：部署新集群并添加
 
 在 linux 机器上，需要构建 Kubernetes 集群并安装 KubeCube 依赖项
 
@@ -98,7 +98,7 @@ ACCESS_PASSWORD=""
 ACCESS_PRIVATE_KEY_PATH="/root/.ssh/id_rsa"
 ```
 
-## 方式二：接管已有集群
+## 方式二：纳管已有集群
 
 添加已有集群需要从 console 页面获取添加集群的定制脚本
 
