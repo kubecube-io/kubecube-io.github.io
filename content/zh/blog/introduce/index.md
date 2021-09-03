@@ -1,9 +1,7 @@
 ---
-authors:
-- 祝剑锋
+author: 祝剑锋
 date: 2021-08-25
-draft: false
-summary: Secure kubeedge workloads using SPIFFE/SPIRE
+summary: KubeCube开源：魔方六面，降阶Kubernetes落地应用
 tags:
 - KubeCube
 title: KubeCube开源：魔方六面，降阶Kubernetes落地应用
