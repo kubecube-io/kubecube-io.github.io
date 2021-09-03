@@ -37,3 +37,7 @@ KubeCube 部署脚本支持的 k8s 版本为 v1.18.20、v1.19.13、v1.20.9、v1.
 在使用部署脚本开始 KubeCube 的安装时，脚本会检测环境，并提示需要安装缺失的依赖
 
 ![env-check](/imgs/installation-guide/requirement/env-check.png)
+
+# 监控组件说明
+
+KubeCube 会默认安装 Prometheus 等监控组件，如果选择在已有k8s集群中部署 KubeCube，并且集群中已安装 Mertics Server，安装 KubeCube 后 Prometheus 会和 Mertics Server 产生冲突，导致监控功能不可用，建议在安装前卸载 Mertics Server。
