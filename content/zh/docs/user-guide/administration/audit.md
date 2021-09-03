@@ -19,11 +19,11 @@ weight: 6
 
 3、在左侧菜单栏点击【自定义资源CRD】，进入到集群级别 CRD 列表，可以点击右上方输入 "hotplug" 进行搜索，找到 “hotplugs.hotplug.kubecube.io” CRD，点击【v1】版本进入 CRD 详情页；
 
-4、选择 common 实例，点击【设置YAML】，找到 spec - component - name: audit，将 “status” 改成 “disabled”，即关闭审计功能；改为 “enabled”，为开启审计功能。详细配置说明见【部署指南】-【热插拔】。
+4、选择 common 实例，点击【设置YAML】，找到 spec.component.name=audit，将 “status” 改成 “disabled”，即关闭审计功能；改为 “enabled”，为开启审计功能。详细配置说明见 [热插拔](https://www.kubecube.io/docs/installation-guide/enable-plugins/) 。
 
 5、配置 ElasticSearch：
 
-- 如果需要安装内置 ElasticSearch，修改上述 common 实例，找到 spec - component - name:  elasticsearch，将 “status” 改成 “enabled”，在集群内安装 ElasticSearch。
+- 如果需要安装内置 ElasticSearch，修改上述 common 实例，找到 spec.component.name=elasticsearch，将 “status” 改成 “enabled”，在集群内安装 ElasticSearch。
 
 - 如果需要连接外部 ElasticSearch，需要修改审计服务的deployment的环境变量：
 
