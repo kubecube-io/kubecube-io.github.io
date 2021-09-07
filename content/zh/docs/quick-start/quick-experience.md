@@ -18,7 +18,7 @@ weight: 2
 
 ![create-tenant](/imgs/quick-start/quick-experience/create-tenant.png)
 
-详细配置说明见 【产品使用指南】-【运维管理】- 【租户管理】。
+详细配置说明见 [租户管理](https://www.kubecube.io/docs/user-guide/administration/tenant/) 。
 
 点击【创建】，如图，即创建了租户："tenant-1"。
 
@@ -31,7 +31,7 @@ weight: 2
 
 ![tenant-quota](/imgs/quick-start/quick-experience/tenant-quota.png)
 
-详细配置说明见 【产品使用指南】-【运维管理】- 【配额管理】。
+详细配置说明见 [配额管理](https://www.kubecube.io/docs/user-guide/administration/quota/) 。
 
 点击【创建】，即完成该租户的配额设置。
 
@@ -48,7 +48,7 @@ weight: 2
 
 ![create-project](/imgs/quick-start/quick-experience/create-project.png)
 
-详细配置说明见 【产品使用指南】-【运维管理】- 【租户管理】-【项目管理】。
+详细配置说明见 [租户管理](https://www.kubecube.io/docs/user-guide/administration/tenant/) -【项目管理】。
 
 点击【创建】，如图，即在租户 "tenant-1" 下创建了项目："project-1"。
 
@@ -56,7 +56,7 @@ weight: 2
 
 选择租户和项目，将用户添加到租户或项目中，并给其分配角色。
 
-详细配置说明见 【产品使用指南】-【运维管理】- 【租户管理】-【成员管理】。
+详细配置说明见 [租户管理](https://www.kubecube.io/docs/user-guide/administration/tenant/) -【成员管理】。
 
 ![add-project-member](/imgs/quick-start/quick-experience/add-project-member.png)
 
@@ -66,7 +66,7 @@ weight: 2
 
 选择集群、租户和项目，填写空间名称以及资源配额，点击【创建】。
 
-详细配置说明见 【产品使用指南】-【运维管理】- 【K8s集群管理】-【空间管理】。
+详细配置说明见 [配额管理](https://www.kubecube.io/docs/user-guide/administration/quota/) 中的【空间管理】。
 
 ![create-namespace](/imgs/quick-start/quick-experience/create-namespace.png)
 
@@ -88,13 +88,13 @@ weight: 2
 
 ![create-namespace](/imgs/quick-start/quick-experience/create-deploy-3.png)
 
-上图展示的示例为，创建一个副本数为1的 Deployment：“deploy-1”。
+上图展示的示例为，创建一个副本数为1的 Deployment：“deploy-1”， 容器中的镜像为：hub.c.163.com/ncepri/skiff-ncs-demo:v7。
 
 创建成功后结果如下：
 
 ![deploy-manage](/imgs/user-guide/ns-scoped-res/workload/Deployment/deploy-manage.png)
 
-详细配置说明见 【产品使用指南】-【K8s资源管理】- 【工作负载管理】-【Deployment】。
+详细配置说明见 [Deployment管理](https://www.kubecube.io/docs/user-guide/ns-scoped-res/workload/deployment/) 。
 
 ### 创建 Service
 
@@ -104,7 +104,7 @@ weight: 2
 
 ![create-service](/imgs/quick-start/quick-experience/create-service.png)
 
-详细配置说明见 【产品使用指南】-【K8s资源管理】- 【服务与发现】-【Service】。
+详细配置说明见 [Service管理](https://www.kubecube.io/docs/user-guide/ns-scoped-res/service-discovery/service/) 。
 
 ### 创建Ingress
 
@@ -114,4 +114,10 @@ weight: 2
 
 ![create-ingress](/imgs/quick-start/quick-experience/create-ingress.png)
 
-详细配置说明见 【产品使用指南】-【K8s资源管理】- 【服务与发现】-【Ingress】。
+详细配置说明见 [Ingress管理](https://www.kubecube.io/docs/user-guide/ns-scoped-res/service-discovery/ingress/) 。
+
+在本地访问镜像中接口：
+
+`curl -H 'Host:foo.bar.com' {部署ingress节点IP}/healthz`, 则会返回以下结果，说明以上内容部署成功：
+
+![create-ingress](/imgs/quick-start/quick-experience/create-ingress-2.png)
