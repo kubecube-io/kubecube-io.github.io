@@ -88,7 +88,7 @@ weight: 2
 
 ![create-namespace](/imgs/quick-start/quick-experience/create-deploy-3.png)
 
-上图展示的示例为，创建一个副本数为1的 Deployment：“deploy-1”， 容器中的镜像为：hub.c.163.com/ncepri/skiff-ncs-demo:v7。
+上图展示的示例为，创建一个副本数为1的 Deployment：“deploy-1”， 容器中的镜像为：hub.c.163.com/kubecube/demo:v0。
 
 创建成功后结果如下：
 
