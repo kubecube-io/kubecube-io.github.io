@@ -1,7 +1,7 @@
 ---
 title: "镜像仓库"
 linkTitle: "镜像仓库"
-weight: 9
+weight: 6
 ---
 
 KubeCube 支持主流的镜像仓库，如 registry.cn-hangzhou.aliyuncs.com，docker.io，hub.c.163.com 等，同时也支持私有仓库，KubeCube

@@ -1,6 +1,6 @@
 ---
 title: "排障系统"
-weight: 10
+weight: 8
 ---
 
 本文档介绍了如何在 KubeCube 上集成 [KubeDiag](https://github.com/kubediag/kubediag) 排障系统。
