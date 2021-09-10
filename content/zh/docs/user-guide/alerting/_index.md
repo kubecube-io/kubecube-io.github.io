@@ -1,4 +1,4 @@
 ---
 title: "告警管理"
-weight: 5
+weight: 4
 ---
