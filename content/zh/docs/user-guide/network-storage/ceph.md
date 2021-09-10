@@ -5,9 +5,17 @@ weight: 2
 
 本文档介绍了如何在 KubeCube 上接入 Ceph 集群。
 
+## 环境说明
+
+| 产品           | 版本    |
+| :-------------| :----   |
+| Kubernetes    | v1.20.9 |
+| KubeCube      | v1.0.0  |
+| Ceph          | 15.2.1  |
+
 ## 准备工作
 
-**登录 Ceph master 节点：**
+**登录 Ceph master 节点**
 
 1. 获取管理 key
 
@@ -15,7 +23,7 @@ weight: 2
    ceph auth get-key client.admin | base64
    ```
 
-2. 在 Ceph 集群中创建一个 kubecube 专用的 pool 和用户
+2. 在 Ceph 集群中创建一个 KubeCube 专用的 pool 和用户
 
    ```ssh
    ceph osd pool create kube 8 8
@@ -28,14 +36,16 @@ weight: 2
    ceph auth get-key client.kube｜base64
    ```
 
-**登录 KubeCube 节点：**
+**登录 K8s 集群 worker 节点**
 
-1. 在 KubeCube 的所有节点上安装 ceph-common；
+1. 安装 ceph-common
 
-2. 使用外部的 Provisioner 提供服务：
+   `apt-get install ceph-common` 或 `yum install ceph-common`等。
+
+2. 使用外部的 Provisioner 提供服务
 
    ```
-   git clone https://github.com/kubernetes-incubator/external-storage.git 
+   git clone https://github.com/kubernetes-incubator/external-storage.git    # v5.5.0
    cd external-storage/ceph/rbd/deploy 
    sed -r -i "s/namespace: [^ ]+/namespace: kube-system/g" ./rbac/clusterrolebinding.yaml ./rbac/rolebinding.yaml 
    kubectl -n kube-system apply -f ./rbac
@@ -43,7 +53,7 @@ weight: 2
 
 ## 创建 Secret
 
-登录 KubeCube 管控节点，执行以下命令：
+登录 KubeCube 所在节点，执行以下命令：
 
 ```ssh
 # 替换为 Ceph 集群生成的 key
@@ -66,7 +76,7 @@ metadata:
      storageclass.beta.kubernetes.io/is-default-class: "true"
 provisioner: ceph.com/rbd
 parameters:
-  monitors: 10.173.32.173:6789
+  monitors: 10.173.32.173:6789  #修改成实际 Ceph Monitor IP
   adminId: admin
   adminSecretName: ceph-secret
   adminSecretNamespace: kube-system
