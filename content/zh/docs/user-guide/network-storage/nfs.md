@@ -11,7 +11,7 @@ weight: 1
 
 1. 通过 NFS 导出文件为 KubeCube 分配服务器访问权限
 
-   修改 `/etc/exports` 文件，添加 `{导出目录} {KubeCube节点IP}(rw,sync,no_subtree_check,insecure)`。如：
+   修改 `/etc/exports` 文件，添加 `{导出目录} {KubeCube应用所在节点IP}(rw,sync,no_subtree_check,insecure)`。如：
 
    ![nfs-6](/imgs/user-guide/network-storage/nfs/nfs-6.png)
 
@@ -24,10 +24,10 @@ weight: 1
 3. 为 KubeCube 打开防火墙
 
    ```ssh
-   ufw allow from {KubeCube节点IP} to any port nfs
+   ufw allow from {KubeCube所在节点IP} to any port nfs
    ```
 
-**登录 KubeCube 节点**
+**登录 K8s 集群 worker 节点**
 
 1. 安装 NFS Common
 
@@ -37,7 +37,7 @@ weight: 1
 
 ## 创建 StorageClass
 
-登录 KubeCube 节点，创建以下文件并 apply，请根据实际环境修改部分参数。
+登录 KubeCube 所在节点，创建以下文件并 apply，请根据实际环境修改部分参数。
 
 ### 配置 account 及相关权限
 
