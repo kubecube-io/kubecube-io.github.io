@@ -46,7 +46,7 @@ KubeCube 会默认安装 Prometheus 等监控组件，如果选择在已有k8s�
 
 2. 在左侧菜单栏点击【自定义资源CRD】，进入到集群级别 CRD 列表，可以点击右上方输入 “hotplug” 进行搜索，找到 “hotplugs.hotplug.kubecube.io” CRD，点击【v1】版本进入 CRD 详情页；
 
-3. 选择 common 实例，点击【设置YAML】，找到 spec.component. name=kubecube-monitoring，添加环境变量 prometheusAdapter.enabled=true，如：
+3. 选择 common 实例，点击【设置YAML】，找到 spec.component. name=kubecube-monitoring，添加环境变量 prometheusAdapter.enabled=false，如：
 
 ```yaml
   - env: |
@@ -59,7 +59,7 @@ KubeCube 会默认安装 Prometheus 等监控组件，如果选择在已有k8s�
           remoteWrite:
           - url: http://10.173.32.129:31291/api/v1/receive
       prometheusAdapter:
-  			enabled: true
+  			enabled: false
     name: kubecube-monitoring
     namespace: kubecube-monitoring
     pkgName: kubecube-monitoring-15.4.10.tgz
