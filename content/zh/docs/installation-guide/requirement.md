@@ -40,4 +40,28 @@ KubeCube 部署脚本支持的 k8s 版本为 v1.18.20、v1.19.13、v1.20.9、v1.
 
 # 监控组件说明
 
-KubeCube 会默认安装 Prometheus 等监控组件，如果选择在已有k8s集群中部署 KubeCube，并且集群中已安装 Mertics Server，安装 KubeCube 后 Prometheus 会和 Mertics Server 产生冲突，导致监控功能不可用，建议在安装前卸载 Mertics Server。
+KubeCube 会默认安装 Prometheus 等监控组件，如果选择在已有k8s集群中部署 KubeCube，并且集群中已安装 Mertics Server，安装 KubeCube 后 Prometheus 会和 Mertics Server 产生冲突，导致监控功能不可用。需要在安装 KubeCube 后执行以下步骤：
+
+1. 点击页面右上角【切换到控制台】，点击任意空间，进入到控制台页面；
+
+2. 在左侧菜单栏点击【自定义资源CRD】，进入到集群级别 CRD 列表，可以点击右上方输入 “hotplug” 进行搜索，找到 “hotplugs.hotplug.kubecube.io” CRD，点击【v1】版本进入 CRD 详情页；
+
+3. 选择 common 实例，点击【设置YAML】，找到 spec.component. name=kubecube-monitoring，添加环境变量 prometheusAdapter.enabled=true，如：
+
+```yaml
+  - env: |
+      grafana:
+        enabled: false
+      prometheus:
+        prometheusSpec:
+          externalLabels:
+            cluster: "{{.cluster}}"
+          remoteWrite:
+          - url: http://10.173.32.129:31291/api/v1/receive
+      prometheusAdapter:
+  			enabled: true
+    name: kubecube-monitoring
+    namespace: kubecube-monitoring
+    pkgName: kubecube-monitoring-15.4.10.tgz
+    status: enabled
+```
