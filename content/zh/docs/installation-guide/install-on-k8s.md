@@ -58,7 +58,7 @@ spec:
 在 Linux 机器上执行部署脚本
 
 ```bash
-KUBECUBE_VERSION=v1.0.0
+KUBECUBE_VERSION=v1.0
 ```
 ```bash
 export CUSTOMIZE="true";curl -fsSL https://kubecube.nos-eastchina1.126.net/kubecube-installer/${KUBECUBE_VERSION}/entry.sh | bash
