@@ -26,7 +26,6 @@ export PRE_DOWNLOAD="true";curl -fsSL https://kubecube.nos-eastchina1.126.net/ku
 设置脚本参数，并按照提示继续运行安装脚本并等待新节点加入集群
 
 - MASTER_IP 为 master 节点 ip
-- LOCAL_IP 为新节点 ip
 
 ```bash
 # if install kubecube on pivot cluster
@@ -75,7 +74,12 @@ KUBERNETES_VERSION="1.20.9"
 # +optional
 # the user who can access master node, it can be empty
 # when NODE_MODE="master" or "control-plane-master"
-MASTER_USER="root"
+SSH_USER="root"
+
+# +optional
+# the port specified to access master node, it can be empty
+# when NODE_MODE="master" or "control-plane-master"
+SSH_PORT=22
 
 # +optional
 # must be empty when ACCESS_PRIVATE_KEY_PATH set
@@ -102,7 +106,6 @@ export CUSTOMIZE="true";curl -fsSL https://kubecube.nos-eastchina1.126.net/kubec
 设置脚本参数，并按照提示继续运行安装脚本并等待新节点加入 control-plane
 
 -  MASTER_IP 需要填已有的 master 节点 ip
--  LOCAL_IP 需要填新节点的节点 ip
 -  CONTROL_PLANE_ENDPOINT 为高可用 vip
 
 ```bash
@@ -152,7 +155,12 @@ KUBERNETES_VERSION="1.20.9"
 # +optional
 # the user who can access master node, it can be empty
 # when NODE_MODE="master" or "control-plane-master"
-MASTER_USER="root"
+SSH_USER="root"
+
+# +optional
+# the port specified to access master node, it can be empty
+# when NODE_MODE="master" or "control-plane-master"
+SSH_PORT=22
 
 # +optional
 # must be empty when ACCESS_PRIVATE_KEY_PATH set
