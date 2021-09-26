@@ -83,7 +83,12 @@ KUBERNETES_VERSION="1.20.9"
 # +optional
 # the user who can access master node, it can be empty
 # when NODE_MODE="master" or "control-plane-master"
-MASTER_USER="root"
+SSH_USER="root"
+
+# +optional
+# the port specified to access master node, it can be empty
+# when NODE_MODE="master" or "control-plane-master"
+SSH_PORT=22
 
 # +optional
 # must be empty when ACCESS_PRIVATE_KEY_PATH set
@@ -158,7 +163,12 @@ KUBERNETES_VERSION="1.20.9"
 # +optional
 # the user who can access master node, it can be empty
 # when NODE_MODE="master" or "control-plane-master"
-MASTER_USER="root"
+SSH_USER="root"
+
+# +optional
+# the port specified to access master node, it can be empty
+# when NODE_MODE="master" or "control-plane-master"
+SSH_PORT=22
 
 # +optional
 # must be empty when ACCESS_PRIVATE_KEY_PATH set
@@ -233,7 +243,12 @@ KUBERNETES_VERSION="1.20.9"
 # +optional
 # the user who can access master node, it can be empty
 # when NODE_MODE="master" or "control-plane-master"
-MASTER_USER="root"
+SSH_USER="root"
+
+# +optional
+# the port specified to access master node, it can be empty
+# when NODE_MODE="master" or "control-plane-master"
+SSH_PORT=22
 
 # +optional
 # must be empty when ACCESS_PRIVATE_KEY_PATH set
@@ -308,7 +323,12 @@ KUBERNETES_VERSION="1.20.9"
 # +optional
 # the user who can access master node, it can be empty
 # when NODE_MODE="master" or "control-plane-master"
-MASTER_USER="root"
+SSH_USER="root"
+
+# +optional
+# the port specified to access master node, it can be empty
+# when NODE_MODE="master" or "control-plane-master"
+SSH_PORT=22
 
 # +optional
 # must be empty when ACCESS_PRIVATE_KEY_PATH set
