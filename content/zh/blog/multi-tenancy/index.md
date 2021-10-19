@@ -82,8 +82,6 @@ KubeCube 多级租户模型突破传统的容器服务多租户模式，采用�
 
 
 
-【视频】
-
 更多内容请访问：https://www.kubecube.io
 
 KubeCube技术交流群：    
