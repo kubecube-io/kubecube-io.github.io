@@ -3,9 +3,128 @@ title: "在已有k8s集群中部署KubeCube"
 weight: 3
 ---
 
-## 在 Kubernetes 集群中部署 KubeCube
+## v1.1.x
 
-### ⚠️修改 Kubernetes API-Server 配置
+### 在 Kubernetes 集群中部署 KubeCube
+
+#### 开始安装
+
+在 Linux 机器上执行部署脚本
+
+```bash
+KUBECUBE_VERSION=v1.1
+```
+```bash
+export CUSTOMIZE="true";curl -fsSL https://kubecube.nos-eastchina1.126.net/kubecube-installer/${KUBECUBE_VERSION}/entry.sh | bash
+```
+
+#### 设置安装脚本参数
+该安装模式下，需要修改以下参数：
+
+INSTALL_KUBECUBE_MEMBER="false"
+
+MASTER_IP="${node ip}"
+> ${node ip} 表示你运行脚本所在 node 机器的 ip，该 node 需要可操作 kubectl
+```bash
+# if install kubecube on pivot cluster
+INSTALL_KUBECUBE_PIVOT="true"
+
+# if install k8s
+INSTALL_KUBERNETES="false"
+
+# there are four node mode below:
+# "master" : node will be installed as a master of cluster
+# "node-join-master" : node will be install as a worker of cluster to join master
+# "control-plane-master" : node will be installed as a master to control plane of cluster
+# "node-join-control-plane" : node will be installed as a master to join control plane
+NODE_MODE="master"
+
+# zone has two choice
+# 1. "cn" : in mainland
+# 2. "others" : out of mainland
+ZONE="cn"
+
+# k8s version you want to install
+# support now is: 1.20.9, 1.19.13, 1.18.20, 1.21.2
+KUBERNETES_VERSION="1.20.9"
+
+# +optional
+# must be set when NODE_MODE="control-plane-master"
+# or "node-join-control-plane"
+CONTROL_PLANE_ENDPOINT="" #{ip}:{port} , dns
+
+#######################################################################
+# member cluster config
+# used when INSTALL_KUBECUBE_MEMBER="true"
+#######################################################################
+
+# if install kubecube on member cluster
+INSTALL_KUBECUBE_MEMBER="false"
+
+# +optional
+# KUBECUBE_HOST must be set when as a member cluster to
+# join pivot cluster, the value is pivot node ip
+KUBECUBE_HOST=""
+
+# +optional
+# must be set when INSTALL_KUBECUBE_MEMBER="true"
+# this value is the name of member cluster you
+# want to take over
+MEMBER_CLUSTER_NAME=""
+
+#######################################################################
+# ssh config
+# used when NODE_MODE="node-join-master" or node-join-control-plane
+#######################################################################
+
+# +optional
+# master ip means master node ip of cluster
+MASTER_IP=""
+
+# +optional
+# the user who can access master node, it can be empty
+SSH_USER="root"
+
+# +optional
+# the port specified to access master node, it can be empty
+SSH_PORT=22
+
+# +optional
+# must be empty when ACCESS_PRIVATE_KEY_PATH set
+# password for master user to access master node
+ACCESS_PASSWORD=""
+
+# +optional
+# must be empty when ACCESS_PASSWORD set
+# ACCESS_PRIVATE_KEY for master user to access master node
+ACCESS_PRIVATE_KEY_PATH="/root/.ssh/id_rsa"
+
+#######################################################################
+# offline config
+# used when offline install choose, must lift offline pkg first
+#######################################################################
+
+OFFLINE_INSTALL="false"
+
+OFFLINE_PKG_PATH=""
+```
+
+### 等待部署完成
+KubeCube 部署完成后，请根据提示信息登陆 console 管理页面
+
+![complete-deploy](/imgs/installation-guide/All-In-One/complete-deploy.png)
+
+### 使用 admin 账户登陆 console
+
+⚠️请在登陆后修改 admin 用户的密码
+
+![login-console](/imgs/installation-guide/All-In-One/login-console.png)
+
+## v1.0.x
+
+### 在 Kubernetes 集群中部署 KubeCube
+
+#### ⚠️修改 Kubernetes API-Server 配置
 
 **必要性**
 
@@ -53,7 +172,7 @@ spec:
       name: cube
 ```
 
-### 开始安装
+#### 开始安装
 
 在 Linux 机器上执行部署脚本
 
@@ -64,7 +183,7 @@ KUBECUBE_VERSION=v1.0
 export CUSTOMIZE="true";curl -fsSL https://kubecube.nos-eastchina1.126.net/kubecube-installer/${KUBECUBE_VERSION}/entry.sh | bash
 ```
 
-### 设置安装脚本参数
+#### 设置安装脚本参数
 该安装模式下，需要修改以下参数：
 
 INSTALL_KUBECUBE_MEMBER="false"
@@ -136,12 +255,12 @@ ACCESS_PASSWORD=""
 ACCESS_PRIVATE_KEY_PATH="/root/.ssh/id_rsa"
 ```
 
-## 等待部署完成
+### 等待部署完成
 KubeCube 部署完成后，请根据提示信息登陆 console 管理页面
 
 ![complete-deploy](/imgs/installation-guide/All-In-One/complete-deploy.png)
 
-## 使用 admin 账户登陆 console
+### 使用 admin 账户登陆 console
 
 ⚠️请在登陆后修改 admin 用户的密码
 
