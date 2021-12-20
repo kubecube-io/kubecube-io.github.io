@@ -22,11 +22,21 @@ weight: 1
 
 # 容器运行时
 
+- KubeCube 支持的 cri 跟随 Kubernetes 标准
+
+- KubeCube 部署脚本支持的 cri 如下：
+
 | 支持的容器运行时 | 版本     |
 | :--------------- | :------- |
 | Docker           | 19.3.12+ |
 
 > 节点上若无容器运行时，部署脚本将自动安装 docker 19.03.12 作为容器运行时
+
+# 网络插件
+
+- KubeCube 支持的 cni 跟随 Kubernetes 标准
+
+- KubeCube 部署脚本的 cni 目前支持 calico
 
 # Kubernetes 版本
 KubeCube 支持的 k8s 版本为 v1.18 ~ v1.21
