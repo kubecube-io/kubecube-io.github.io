@@ -118,5 +118,5 @@ users:
 
 <img src="/imgs/kubecube-wechat.png" alt="kubecube微信" style="zoom:40%;" />
 
-**作者简介：** 蔡鑫涛，网易数帆轻舟容器平台资深开发，KubeCube 核心 Committer
+**作者简介：** 蔡鑫涛，网易数帆轻舟容器平台资深开发，KubeCube Committer
 
