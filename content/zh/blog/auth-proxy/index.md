@@ -23,7 +23,7 @@ v1.1 版本中最主要的特性是 Auth-Proxy 能力的支持，使得部署更
 
 ![Auth-Proxy](imgs/auth-proxy.png)
 
-对于 Auth-Webhook  面临的困境，我们设计了 Warden-Auth-Proxy 模块来解决问题。Warden-Auth-Proxy 即 K8s 集群的认证代理，它对外提供了类似 `kubectl proxy` 的代理能力。不同的是，它会解析 request 中的 Bearer Token 为 UserInfo，然后使用 K8s 的 [impersonation 能力](https://kubernetes.io/zh/docs/reference/access-authn-authz/authentication/#user-impersonation)进行用户伪装。
+对于 Auth-Webhook 面临的困境，我们设计了 Warden-Auth-Proxy 模块来解决问题。Warden-Auth-Proxy 即 K8s 集群的认证代理，它对外提供了类似 `kubectl proxy` 的代理能力。不同的是，它会解析 request 中的 Bearer Token 为 UserInfo，然后使用 K8s 的 [impersonation 能力](https://kubernetes.io/zh/docs/reference/access-authn-authz/authentication/#user-impersonation)进行用户伪装。
 
 值得一提的是，Auth-Proxy 模块之所以集成在作为 Cluster Agent 的 Warden 中，而不是集成在管控集群的 KubeCube 中，是因为在设计上希望做到两点：
 
