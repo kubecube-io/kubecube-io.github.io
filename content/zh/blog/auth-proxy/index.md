@@ -34,6 +34,8 @@ Auth-Proxy 的原理并不复杂，但是在实现中，需要注意以下几个
 
 ### 1. kubectl exec 命令代理
 
+对于代理  `kubectl exec` 的场景，使用普通的 HTTP 代理并不可行，究其原因是因为通信协议不匹配。
+
 不同于其他的 HTTP RESTful 请求，`kubectl exec` 命令实际是使用的 [SPDY 协议](https://en.wikipedia.org/wiki/SPDY)，SPDY 协议是 google 开发的 TCP 会话层协议, SPDY 协议中将 HTTP 的 request/response 称为 Stream，并支持 TCP 的链接复用，同时多个 stream之间通过 stream-id 来进行标记，简单来说就是支持在单个链接同时进行多个请求响应的处理，并且互不影响 。
 
 在代理 `kubectl exec` 请求时，需要 Upgrade HTTP 协议，即通过 101(switching protocal) 状态码切换至 SPDY 协议来继续与下游服务通信。
@@ -65,9 +67,9 @@ func (h *UpgradeAwareHandler) ServeHTTP(w http.ResponseWriter, req *http.Request
 
 ### 2. kubeconfig
 
-要实现对于 RESTful 请求的代理，只需保证 HTTP Client 的请求地址是 Warden-Auth-Proxy 的地址即可。但是对于使用 kubectl 来说，我们需要在 kubeconfig 上做文章。
+对于使用 kubeconfig 与集群通信的场景，默认的 kubeconfig 中的 `cluster server` 的地址往往直接指向 kube-apiserver，这使得用户与集群的通信没有经过 Warden-Auth-Proxy 代理。
 
-KubeCube 提供下载 kubeconfig  的能力，使用当前 user 下载的 kubeconfig，包含了 user 的访问凭证，包含了该 user 所能访问的所有 cluster  的 context，user 可以自行切换 context 来对 KubeCube 纳管的集群进行访问。KubeCube 通过改写 kubeconfig 中的 kube-apiserver 地址为 Warden-Auth-Proxy 地址来使得用户通过该 kubeconfig 执行的 kubectl 请求会被 Warden-Auth-Proxy 所代理。
+因此，对于上述场景，我们需要在 kubeconfig 上做文章。KubeCube 提供下载 kubeconfig  的能力，使用当前 user 下载的 kubeconfig，包含了 user 的访问凭证，包含了该 user 所能访问的所有 cluster  的 context，user 可以自行切换 context 来对 KubeCube 纳管的集群进行访问。KubeCube 通过改写 kubeconfig 中的 kube-apiserver 地址为 Warden-Auth-Proxy 地址来使得用户通过该 kubeconfig 执行的 kubectl 或 client-go 请求会被 Warden-Auth-Proxy 所代理。
 
 ```yaml
 apiVersion: v1
@@ -104,8 +106,10 @@ users:
 
 ![Auth-Proxy-security](imgs/auth-proxy-security.png)
 
-- KubeCube 使用 Bearer Token 作为用户访问凭证，Invalid Bearer Token 会被 Warden-Auth-Proxy 拒绝。
-- 应使用 TLS 对 Warden-Auth-Proxy 进行服务端身份校验，需要相应的 CA 证书，该 TLS 能力在规划中，还未支持，当前使用 `insecure-skip-tls-verify` 跳过，在后续版本中，会增加对 TLS 能力的支持。
+在对通信安全有较高要求的场景下，我们需要保证从 `Client——>Warden-Auth-Proxy——>kube-apiserver` 的通信链路是加密的，可靠的。我们使用以下方式加以保证：
+
+- KubeCube 使用 Bearer Token 作为用户访问凭证，Invalid Bearer Token 会被 Warden-Auth-Proxy 拒绝，相当于服务端要求验证客户端身份。
+- 应使用 TLS 对 Warden-Auth-Proxy 进行服务端身份校验，需要相应的 CA 证书，该 TLS 能力在规划中，还未支持。当前使用 `insecure-skip-tls-verify` 跳过，在后续版本中，会增加对 TLS 能力的支持。
 - Warden-Auth-Proxy 与 kube-apiserver 之间，通过 mTLS 进行双向加密通信，Warden-Auth-Proxy 持有 K8s 集群的 admin 证书，并以 admin 身份伪装成目标 user 与 kube-apiserver 进行通信。
 
 ## 写在最后
