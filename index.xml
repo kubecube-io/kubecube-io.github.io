@@ -80,7 +80,7 @@
 &lt;h2 id="写在最后">写在最后&lt;/h2>
 &lt;p>未来我们会持续提供更多功能，帮助企业简化容器化落地。也欢迎大家参与贡献，提出宝贵的建议。添加以下微信进入 KubeCube 交流群。&lt;/p>
 &lt;p>&lt;img src="https://kubecube-io.github.io/imgs/kubecube-wechat.png" alt="kubecube微信" style="zoom:40%;" />&lt;/p>
-&lt;p>&lt;strong>作者简介：&lt;/strong> 蔡鑫涛，网易数帆轻舟容器平台资深开发，KubeCube 核心 Committer&lt;/p></description></item><item><title>Blog: 深入解读 KubeCube 多集群管理</title><link>https://kubecube-io.github.io/blog/2021/10/29/%E6%B7%B1%E5%85%A5%E8%A7%A3%E8%AF%BB-kubecube-%E5%A4%9A%E9%9B%86%E7%BE%A4%E7%AE%A1%E7%90%86/</link><pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate><guid>https://kubecube-io.github.io/blog/2021/10/29/%E6%B7%B1%E5%85%A5%E8%A7%A3%E8%AF%BB-kubecube-%E5%A4%9A%E9%9B%86%E7%BE%A4%E7%AE%A1%E7%90%86/</guid><description>
+&lt;p>&lt;strong>作者简介：&lt;/strong> 蔡鑫涛，网易数帆轻舟容器平台资深开发，KubeCube Committer&lt;/p></description></item><item><title>Blog: 深入解读 KubeCube 多集群管理</title><link>https://kubecube-io.github.io/blog/2021/10/29/%E6%B7%B1%E5%85%A5%E8%A7%A3%E8%AF%BB-kubecube-%E5%A4%9A%E9%9B%86%E7%BE%A4%E7%AE%A1%E7%90%86/</link><pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate><guid>https://kubecube-io.github.io/blog/2021/10/29/%E6%B7%B1%E5%85%A5%E8%A7%A3%E8%AF%BB-kubecube-%E5%A4%9A%E9%9B%86%E7%BE%A4%E7%AE%A1%E7%90%86/</guid><description>
 &lt;p>&lt;strong>为什么需要多集群？&lt;/strong>&lt;/p>
 &lt;ul>
 &lt;li>生产级落地，需要经过多个环境验证，单个集群往往不能满足隔离需求&lt;/li>
