@@ -32,7 +32,7 @@ v1.1 版本中最主要的特性是 Auth-Proxy 能力的支持，使得部署更
 
 Auth-Proxy 的原理并不复杂，但是在实现中，需要注意以下几个问题：
 
-### 1. kubectl exec 命令代理
+### 1. kubectl exec 命令代理协议问题
 
 对于代理  `kubectl exec` 的场景，使用普通的 HTTP 代理并不可行，究其原因是因为通信协议不匹配。
 
@@ -65,7 +65,7 @@ func (h *UpgradeAwareHandler) ServeHTTP(w http.ResponseWriter, req *http.Request
 }
 ```
 
-### 2. kubeconfig
+### 2. kubeconfig 配置问题
 
 对于使用 kubeconfig 与集群通信的场景，默认的 kubeconfig 中的 `cluster server` 的地址往往直接指向 kube-apiserver，这使得用户与集群的通信没有经过 Warden-Auth-Proxy 代理。
 
@@ -102,7 +102,7 @@ users:
     token: {user_token}
 ```
 
-### 3. security
+### 3. security 通信安全问题
 
 ![Auth-Proxy-security](imgs/auth-proxy-security.png)
 
