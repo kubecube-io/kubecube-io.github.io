@@ -269,13 +269,6 @@ ACCESS_PRIVATE_KEY_PATH="/root/.ssh/id_rsa"
 OFFLINE_INSTALL="false"
 
 OFFLINE_PKG_PATH=""
-
-#######################################################################
-# container runtime config
-# if value is docker, then use docker as container runtime
-# else if value is containerd, then use containerd as container runtime
-#######################################################################
-CONTAINER_RUNTIME="containerd"
 ```
 
 ### 方式二：纳管已有集群
