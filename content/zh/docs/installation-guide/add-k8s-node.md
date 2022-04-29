@@ -121,7 +121,7 @@ OFFLINE_PKG_PATH=""
 # if value is docker, then use docker as container runtime
 # else if value is containerd, then use containerd as container runtime
 #######################################################################
-CONTAINER_RUNTIME="docker"
+CONTAINER_RUNTIME="containerd"
 ```
 
 ### 向集群的 control-plane 添加 master 节点
@@ -224,6 +224,13 @@ ACCESS_PRIVATE_KEY_PATH="/root/.ssh/id_rsa"
 OFFLINE_INSTALL="false"
 
 OFFLINE_PKG_PATH=""
+
+#######################################################################
+# container runtime config
+# if value is docker, then use docker as container runtime
+# else if value is containerd, then use containerd as container runtime
+#######################################################################
+CONTAINER_RUNTIME="containerd"
 ```
 
 ## v1.1.x

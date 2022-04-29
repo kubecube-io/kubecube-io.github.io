@@ -139,7 +139,7 @@ OFFLINE_PKG_PATH=""
 # if value is docker, then use docker as container runtime
 # else if value is containerd, then use containerd as container runtime
 #######################################################################
-CONTAINER_RUNTIME="docker"
+CONTAINER_RUNTIME="containerd"
 ```
 
 #### worker1 作为工作节点加入集群
@@ -252,7 +252,7 @@ OFFLINE_PKG_PATH=""
 # if value is docker, then use docker as container runtime
 # else if value is containerd, then use containerd as container runtime
 #######################################################################
-CONTAINER_RUNTIME="docker"
+CONTAINER_RUNTIME="containerd"
 ```
 
 ### 部署高可用 KubeCube
@@ -367,7 +367,7 @@ OFFLINE_PKG_PATH=""
 # if value is docker, then use docker as container runtime
 # else if value is containerd, then use containerd as container runtime
 #######################################################################
-CONTAINER_RUNTIME="docker"
+CONTAINER_RUNTIME="containerd"
 ```
 
 ## v1.1.x
