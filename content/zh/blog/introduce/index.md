@@ -81,6 +81,6 @@ KubeCube支持AMD及ARM架构，同时支持目前主流的国产处理器及操
 
 未来我们会持续提供更多功能，帮助企业简化容器化落地。也欢迎大家的宝贵建议，添加以下微信进入KubeCube交流群。
 
-<img src="imgs/kubecube-wechat.png" alt="kubecube微信" style="zoom:50%;" />
+<img src="/imgs/kubecube-wechat.png" alt="kubecube微信" style="height: 200px;" />
 
 **作者简介：** 祝剑锋，网易数帆轻舟容器平台负责人，KubeCube社区核心维护者，主导KubeCube容器平台的开源工作，负责网易数帆轻舟容器平台集团内大规模落地及产品化建设。具有六年Kubernetes及容器平台相关研发及大规模实践经验。

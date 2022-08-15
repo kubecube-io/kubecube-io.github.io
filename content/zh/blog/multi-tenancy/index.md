@@ -86,4 +86,4 @@ KubeCube 多级租户模型突破传统的容器服务多租户模式，采用�
 
 KubeCube技术交流群：    
 
-![image-20210907095921197](imgs/wechat.png)
+<img src="/imgs/kubecube-wechat.png" alt="kubecube微信" style="height: 200px;" />

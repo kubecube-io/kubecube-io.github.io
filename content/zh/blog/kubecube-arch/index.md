@@ -17,3 +17,6 @@ title: KubeCube设计实践，初学者玩好Kubernetes的正确姿势
 
 点击下载 [分享PPT](./KubeCube设计实践：初学者玩好Kubernetes的正确姿势.pdf)
 
+未来我们会持续提供更多功能，帮助企业简化容器化落地。也欢迎大家的宝贵建议，添加以下微信进入KubeCube交流群。
+
+<img src="/imgs/kubecube-wechat.png" alt="kubecube微信" style="height: 200px;" />
