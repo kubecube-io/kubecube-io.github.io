@@ -116,7 +116,7 @@ users:
 
 未来我们会持续提供更多功能，帮助企业简化容器化落地。也欢迎大家参与贡献，提出宝贵的建议。添加以下微信进入 KubeCube 交流群。
 
-<img src="/imgs/kubecube-wechat.png" alt="kubecube微信" style="zoom:40%;" />
+<img src="/imgs/kubecube-wechat.png" alt="kubecube微信" style="height: 200px;" />
 
 **作者简介：** 蔡鑫涛，网易数帆轻舟容器平台资深开发，KubeCube Committer
 

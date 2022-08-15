@@ -436,7 +436,7 @@ KubeCube 的多集群模型实现依靠的是 KubeCube 和 Warden 的相辅相�
 
 未来我们会持续提供更多功能，帮助企业简化容器化落地。也欢迎大家的宝贵建议，添加以下微信进入KubeCube交流群。
 
-<img src="/imgs/kubecube-wechat.png" alt="kubecube微信" style="zoom:40%;" />
+<img src="/imgs/kubecube-wechat.png" alt="kubecube微信" style="height: 200px;" />
 
 **作者简介：** 蔡鑫涛，网易数帆轻舟容器平台开发，KubeCube Committer
 
