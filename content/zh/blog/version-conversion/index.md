@@ -1,10 +1,10 @@
 ---
 author: 蔡鑫涛
-date: 2022-7-1
+date: 2022-09-13
 summary: KubeCube v1.2 版本发布
 tags:
 - KubeCube
-  title: KubeCube v1.2 版本发布
+title: KubeCube v1.2 版本发布
 ---
 
 KubeCube 迎来了 v1.2 版本的发布，新增了 K8s 版本转化、HNC GA 版本适配、审计信息国际化、warden 主动上报模式，为集群和项目设置 Ingress 域名后缀等特性，也修复了若干已知问题，详见 [ChangeLog](https://github.com/kubecube-io/KubeCube/blob/release-v1.1/docs/changelog.md)。
@@ -19,17 +19,17 @@ v1.2 版本中最主要的特性是 Version-Conversion 能力的支持，使得�
 
 当用户需要在控制面纳管多 K8s 集群时，用户暂时不希望升级老的稳定的 K8s 集群，又希望新增的 K8s 集群是比较高的版本，这时，管控面的 KubeCube，就能够提供访问多版本 K8s 的能力，对外暴露统一的 K8s 风格的 RESTfule API，用户既可以使用精确的 GVR 去访问不同版本的 K8s 资源，也可用使用统一版本的 GVR 去访问不同版本的 K8s 资源，KubeCube 会做自适应转化。
 
-![multi-k8s-version](/Users/caixin/Documents/coding/go/src/github.com/kubecube-io/kubecube-io.github.io/content/zh/blog/version-conversion/imgs/multi-k8s-version.png)
+![multi-k8s-version](imgs/multi-k8s-version.png)
 
 ## K8s native convert
 
 ### 1. K8s api workflow
 
-![k8s-api-flow](/Users/caixin/Documents/coding/go/src/github.com/kubecube-io/kubecube-io.github.io/content/zh/blog/version-conversion/imgs/k8s-api-flow.png)
+![k8s-api-flow](imgs/k8s-api-flow.png)
 
 ### 2. K8s version convert
 
-![k8s-version-convert](/Users/caixin/Documents/coding/go/src/github.com/kubecube-io/kubecube-io.github.io/content/zh/blog/version-conversion/imgs/k8s-version-convert.png)
+![k8s-version-convert](imgs/k8s-version-convert.png)
 
 **k8s 版本转换原则**
 
@@ -157,13 +157,13 @@ func (c *Converter) Convert(src, dest interface{}, meta *Meta) error {
 
 ### 1. Conversion func register
 
-![conversion-func-register](/Users/caixin/Documents/coding/go/src/github.com/kubecube-io/kubecube-io.github.io/content/zh/blog/version-conversion/imgs/conversion-func-register.png)
+![conversion-func-register](imgs/conversion-func-register.png)
 
 KubeCube 会默认注册所有 k8s 原生资源的转换函数，同时也提供注册自定义资源转换函数的入口。
 
 ### 2. Greeting target cluster
 
-![version-greeting](/Users/caixin/Documents/coding/go/src/github.com/kubecube-io/kubecube-io.github.io/content/zh/blog/version-conversion/imgs/version-greeting.png)
+![version-greeting](imgs/version-greeting.png)
 
 ### 3. Controller-runtime client support
 
