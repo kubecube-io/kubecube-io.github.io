@@ -26,7 +26,7 @@ weight: 1
 | ----------- | ------------- | -------- | ---------- |
 | v1.0 ~ v1.4 | v1.18 ~ v.123 | 19.3.12+ | 1.5.x      |
 
-# 容器运行时
+## 容器运行时
 
 - KubeCube 支持的 cri 跟随 Kubernetes 标准
 
@@ -39,13 +39,13 @@ weight: 1
 
 > 节点上若无容器运行时，部署脚本将自动安装 containerd 1.5.5 作为容器运行时
 
-# 网络插件
+## 网络插件
 
 - KubeCube 支持的 cni 跟随 Kubernetes 标准
 
 - KubeCube 部署脚本的 cni 目前支持 calico
 
-# Kubernetes 版本
+## Kubernetes 版本
 KubeCube 支持的 k8s 版本为 v1.18 ~ v1.23
 KubeCube 部署脚本支持的 k8s 版本为 v1.18.20、v1.19.13、v1.20.9、v1.21.2、v1.22.2、v1.23.5
 
