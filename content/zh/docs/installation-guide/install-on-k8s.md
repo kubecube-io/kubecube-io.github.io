@@ -3,6 +3,134 @@ title: "在已有k8s集群中部署KubeCube"
 weight: 3
 ---
 
+## v1.4.x
+
+### 在 Kubernetes 集群中部署 KubeCube
+
+#### 开始安装
+
+在 Linux 机器上执行部署脚本
+
+```bash
+KUBECUBE_VERSION=v1.4
+```
+```bash
+export CUSTOMIZE="true";curl -fsSL https://kubecube.nos-eastchina1.126.net/kubecube-installer/${KUBECUBE_VERSION}/entry.sh | bash
+```
+
+#### 设置安装脚本参数
+该安装模式下，需要修改以下参数：
+```bash
+# if install kubecube on pivot cluster
+INSTALL_KUBECUBE_PIVOT="true"
+
+# if install k8s
+INSTALL_KUBERNETES="false"
+
+# k8s cni, support now is calico only
+CNI="calico"
+
+# there are four node mode below:
+# "master" : node will be installed as a master of cluster
+# "node-join-master" : node will be install as a worker of cluster to join master
+# "control-plane-master" : node will be installed as a master to control plane of cluster
+# "node-join-control-plane" : node will be installed as a master to join control plane
+NODE_MODE="master"
+
+# zone has two choice
+# 1. "cn" : in mainland
+# 2. "others" : out of mainland
+ZONE="cn"
+
+# k8s version you want to install
+# support now is: 1.19.13, 1.20.9, 1.21.2, 1.22.2, 1.23.5
+KUBERNETES_VERSION="1.23.5"
+
+# +optional
+# must be set when NODE_MODE="control-plane-master"
+# or "node-join-control-plane"
+CONTROL_PLANE_ENDPOINT="" #{ip}:{port} , dns
+
+# +optional
+# KUBERNETES_BIND_ADDRESS generally is node_ip
+# can be set when NODE_MODE="master" ot "control-plane-master"
+# default value is $(hostname -I |awk '{print $1}')
+KUBERNETES_BIND_ADDRESS="" #{node_ip}
+
+#######################################################################
+# member cluster config
+# used when INSTALL_KUBECUBE_MEMBER="true"
+#######################################################################
+
+# if install kubecube on member cluster
+INSTALL_KUBECUBE_MEMBER="false"
+
+# +optional
+# KUBECUBE_HOST must be set when as a member cluster to
+# join pivot cluster, the value is pivot node ip
+KUBECUBE_HOST=""
+
+# +optional
+# must be set when INSTALL_KUBECUBE_MEMBER="true"
+# this value is the name of member cluster you
+# want to take over
+MEMBER_CLUSTER_NAME=""
+
+#######################################################################
+# ssh config
+# used when NODE_MODE="node-join-master" or node-join-control-plane
+#######################################################################
+
+# +optional
+# master ip means master node ip of cluster
+MASTER_IP=""
+
+# +optional
+# the user who can access master node, it can be empty
+SSH_USER="root"
+
+# +optional
+# the port specified to access master node, it can be empty
+SSH_PORT=22
+
+# +optional
+# must be empty when ACCESS_PRIVATE_KEY_PATH set
+# password for master user to access master node
+ACCESS_PASSWORD=""
+
+# +optional
+# must be empty when ACCESS_PASSWORD set
+# ACCESS_PRIVATE_KEY for master user to access master node
+ACCESS_PRIVATE_KEY_PATH="/root/.ssh/id_rsa"
+
+#######################################################################
+# offline config
+# used when offline install choose, must lift offline pkg first
+#######################################################################
+
+OFFLINE_INSTALL="false"
+
+OFFLINE_PKG_PATH=""
+
+#######################################################################
+# container runtime config
+# if value is docker, then use docker as container runtime
+# else if value is containerd, then use containerd as container runtime
+#######################################################################
+CONTAINER_RUNTIME="docker"
+```
+
+### 等待部署完成
+KubeCube 部署完成后，请根据提示信息登陆 console 管理页面
+
+![complete-deploy](/imgs/installation-guide/All-In-One/complete-deploy.png)
+
+### 使用 admin 账户登陆 console
+
+⚠️请在登陆后修改 admin 用户的密码
+
+![login-console](/imgs/installation-guide/All-In-One/login-console.png)
+
 ## v1.2.x
 
 ### 在 Kubernetes 集群中部署 KubeCube
