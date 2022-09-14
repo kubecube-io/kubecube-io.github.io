@@ -1,15 +1,15 @@
 ---
 author: 蔡鑫涛
 date: 2022-09-13
-summary: KubeCube v1.2 版本发布
+summary: KubeCube 版本转换：大幅提升K8s版本适配能力
 tags:
 - KubeCube
-title: KubeCube v1.2 版本发布
+title: KubeCube 版本转换：大幅提升K8s版本适配能力
 ---
 
-KubeCube 迎来了 v1.2 版本的发布，新增了 K8s 版本转化、HNC GA 版本适配、审计信息国际化、warden 主动上报模式，为集群和项目设置 Ingress 域名后缀等特性，也修复了若干已知问题，详见 [ChangeLog](https://github.com/kubecube-io/KubeCube/blob/release-v1.1/docs/changelog.md)。
+KubeCube 迎来了新版本的发布，新增了 K8s 版本转化、HNC GA 版本适配、审计信息国际化、warden 主动上报模式，为集群和项目设置 Ingress 域名后缀等特性，也修复了若干已知问题，详见 [ChangeLog](https://github.com/kubecube-io/KubeCube/blob/release-v1.4/docs/changelog.md)。
 
-v1.2 版本中最主要的特性是 Version-Conversion 能力的支持，使得接入 KubeCube 的用户无需感知被 KubeCube 接管的 K8s 集群版本，可以使用指定版本的 K8s API 来操作 K8s 资源，KubeCube 会做自适应转化；同时 KubeCube 也将这个能力包装成 SDK 供外部使用。
+该版本中最主要的特性是 Version-Conversion 能力的支持，使得接入 KubeCube 的用户无需感知被 KubeCube 接管的 K8s 集群版本，可以使用指定版本的 K8s API 来操作 K8s 资源，KubeCube 会做自适应转化；同时 KubeCube 也将这个能力包装成 SDK 供外部使用。
 
 ## 为什么需要多 K8s 版本转化？
 
