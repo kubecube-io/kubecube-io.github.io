@@ -20,6 +20,12 @@ weight: 1
 
 > 以上系统配置要求适用于 KubeCube 默认最小化 All In One 模式安装，如需启动更多可插拔组件和拓展功能，建议机器配置为 8 核 CPU 和 16 G 内存
 
+# 依赖说明
+
+| KubeCube    | Kubernetes    | Docker   | Containerd |
+| ----------- | ------------- | -------- | ---------- |
+| v1.0 ~ v1.4 | v1.18 ~ v.123 | 19.3.12+ | 1.5.x      |
+
 # 容器运行时
 
 - KubeCube 支持的 cri 跟随 Kubernetes 标准
@@ -42,12 +48,6 @@ weight: 1
 # Kubernetes 版本
 KubeCube 支持的 k8s 版本为 v1.18 ~ v1.23
 KubeCube 部署脚本支持的 k8s 版本为 v1.18.20、v1.19.13、v1.20.9、v1.21.2、v1.22.2、v1.23.5
-
-# 依赖说明
-
-| KubeCube    | Kubernetes    | Docker   | Containerd |
-| ----------- | ------------- | -------- | ---------- |
-| v1.0 ~ v1.4 | v1.18 ~ v.123 | 19.3.12+ | 1.5.x      |
 
 # 前置准备
 
