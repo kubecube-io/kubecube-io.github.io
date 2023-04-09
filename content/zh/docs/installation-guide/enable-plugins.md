@@ -1,6 +1,6 @@
 ---
 title: "热插拔"
-weight: 7
+weight: 4
 ---
 
 热插拔是通过修改配置文件实现不停机更新监控、日志、审计等组件的启停和配置。
@@ -29,8 +29,6 @@ pivot-cluster   running   16d
 ## Common配置说明
 
 目前，默认的 common 配置包括以下几个组件：
-
-`audit`：操作审计
 
 `logseer`：日志管理组件，仅在管控集群安装
 
