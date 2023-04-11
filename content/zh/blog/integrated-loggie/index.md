@@ -127,7 +127,7 @@ spec:
 
 KubeCube 新增了 [kubecube-chart](https://github.com/kubecube-io/kubecube-chart) 工程，用于维护 KubeCube 的部署 chart，用户可以直接使用该工程进行 KubeCube 的管控面和计算面的部署。
 
-KubeCube 新增了 [hotplugs](https://github.com/kubecube-io/hotplugs) 工程，用于维护 KubeCube 所用的热插拔部署包，上文提到的 Loggie，就是作为 KubeCube 的一个热插拔组件，维护在该工程中。
+KubeCube 新增了 [hotplugs](https://github.com/kubecube-io/hotplugs) 工程，用于维护 KubeCube 所用的热插拔部署包，上文提到的 Loggie，就是作为 KubeCube 的一个热插拔组件，维护在该工程中。后期，用户也可以通过自己的热插拔部署包，使用 KubeCube 的热插拔框架进行能力拓展。
 
 KubeCube 更加专注容器平台自身，提供通过 helm 的方式在已有的 k8s 上安装 KubeCube，同时，为了让用户在裸机上快速体验 KubeCube，KubeCube 保留了 All-In-One 的安装方式，注意，All-In-One 的部署模式，只能用作 POC，不能用于生产。关于 K8s 的安装，社区已经有许多成熟的方案，比如标准的 kubeadm 安装方式，更加自动化的 kubez-ansible 方式等，用户可以根据自己的需求，进行自定义的 K8s 集群安装，随后在已有的 K8s 上安装 KubeCube。
 
