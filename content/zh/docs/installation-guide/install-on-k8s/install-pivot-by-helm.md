@@ -18,7 +18,7 @@ KUBECUBE_VERSION=v1.8
 ```
 
 ```bash
-curl -fsSL https://kubecube.nos-eastchina1.126.net/kubecube-chart/${KUBECUBE_VERSION}
+curl -s https://kubecube.nos-eastchina1.126.net/kubecube-chart/${KUBECUBE_VERSION}/kubecube-chart.tar.gz | tar -xz
 ```
 
 ### 通过 helm 在管控集群上安装 KubeCube

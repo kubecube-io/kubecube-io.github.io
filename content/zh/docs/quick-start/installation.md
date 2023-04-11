@@ -3,16 +3,19 @@ title: "快速部署"
 weight: 1
 ---
 
-快速部署使用 All-In-One 的方式进行部署
+用户可以通过 All-In-One 的方式，或者在已有 K8s 集群上安装的方式来快速部署 KubeCube
 
 ## 部署环境确认
 
 请根据 [部署环境要求](https://www.kubecube.io/docs/installation-guide/requirement/) 确认快速部署的前置要求 
 
 ## All In One 部署
-All In One 提供以下部署方式：
 
-[在 Linux 上部署 KubeCube](https://www.kubecube.io/docs/installation-guide/all-in-one/#在-linux-上部署-kubecube)
+[在 Linux 上部署单节点 K8s 以及 KubeCube](https://www.kubecube.io/docs/installation-guide/all-in-one/#在-linux-上部署-kubecube)
+
+## 在已有 K8s 集群上部署
+
+[在已有 K8s 集群上部署 KubeCube](https://www.kubecube.io/docs/installation-guide/install-on-k8s)
 
 
 ## 等待部署完成

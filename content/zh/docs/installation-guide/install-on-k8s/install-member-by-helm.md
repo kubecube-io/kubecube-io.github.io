@@ -3,7 +3,6 @@ title: "通过helm纳管计算集群"
 weight: 9
 ---
 
-
 使用 helm 的方式在计算集群中安装 Warden（KubeCube 的计算集群 agent），安装完成后，Warden 将主动向管控集群的 KubeCube 注册计算集群信息，完成计算集群的纳管。
 
 ## v1.8.x
@@ -19,7 +18,7 @@ KUBECUBE_VERSION=v1.8
 ```
 
 ```bash
-curl -fsSL https://kubecube.nos-eastchina1.126.net/kubecube-chart/${KUBECUBE_VERSION}
+curl -s https://kubecube.nos-eastchina1.126.net/kubecube-chart/${KUBECUBE_VERSION}/kubecube-chart.tar.gz | tar -xz
 ```
 
 ### 通过 helm 在计算集群上安装 Warden

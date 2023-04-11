@@ -51,7 +51,7 @@ KubeCube 部署脚本支持的 k8s 版本为 v1.18.20、v1.19.13、v1.20.9、v1.
 
 ## 关于 K8s 集群安装
 
-KubeCube 的 All In One 安装脚本提供单节点的 K8s 集群安装。如果需要自定义安装 K8s 集群，可以使用 [kubez-ansible](https://github.com/gopixiu-io/kubez-ansible)。之后 kubez-ansible 中也会集成 KubeCube。
+KubeCube 的 All In One 安装脚本提供单节点的 K8s 集群安装。如果需要自定义安装 K8s 集群，可以使用 kubeadm、[kubez-ansible](https://github.com/gopixiu-io/kubez-ansible) 等开源工具，之后 kubez-ansible 中也会集成 KubeCube。
 
 # 前置准备
 
