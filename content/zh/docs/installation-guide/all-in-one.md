@@ -18,14 +18,14 @@ export KUBECUBE_VERSION=v1.8
 ```
 
 ```bash
-curl -fsSL https://kubecube.nos-eastchina1.126.net/kubecube-installer/v1.4/entry.sh | bash
+curl -fsSL https://kubecube.nos-eastchina1.126.net/kubecube-installer/release/v1.3/entry.sh | bash
 ```
 
 ### 等待部署完成
 
 KubeCube 部署完成后，请根据提示信息登陆 console 管理页面
 
-![complete-deploy](/imgs/installation-guide/All-In-One/complete-deploy.png)
+![completed-deploy](/imgs/installation-guide/All-In-One/completed-deploy.png)
 
 ### 使用 admin 账户登陆 console
 
@@ -51,7 +51,7 @@ curl -fsSL https://kubecube.nos-eastchina1.126.net/kubecube-installer/${KUBECUBE
 ### 等待部署完成
 KubeCube 部署完成后，请根据提示信息登陆 console 管理页面
 
-![complete-deploy](/imgs/installation-guide/All-In-One/complete-deploy.png)
+![completed-deploy](/imgs/installation-guide/All-In-One/completed-deploy.png)
 
 ### 使用 admin 账户登陆 console
 
@@ -77,7 +77,7 @@ curl -fsSL https://kubecube.nos-eastchina1.126.net/kubecube-installer/${KUBECUBE
 ### 等待部署完成
 KubeCube 部署完成后，请根据提示信息登陆 console 管理页面
 
-![complete-deploy](/imgs/installation-guide/All-In-One/complete-deploy.png)
+![completed-deploy](/imgs/installation-guide/All-In-One/completed-deploy.png)
 
 ### 使用 admin 账户登陆 console
 
@@ -103,7 +103,7 @@ curl -fsSL https://kubecube.nos-eastchina1.126.net/kubecube-installer/${KUBECUBE
 ### 等待部署完成
 KubeCube 部署完成后，请根据提示信息登陆 console 管理页面
 
-![complete-deploy](/imgs/installation-guide/All-In-One/complete-deploy.png)
+![completed-deploy](/imgs/installation-guide/All-In-One/completed-deploy.png)
 
 ### 使用 admin 账户登陆 console
 
@@ -130,7 +130,7 @@ curl -fsSL https://kubecube.nos-eastchina1.126.net/kubecube-installer/${KUBECUBE
 ### 等待部署完成
 KubeCube 部署完成后，请根据提示信息登陆 console 管理页面
 
-![complete-deploy](/imgs/installation-guide/All-In-One/complete-deploy.png)
+![completed-deploy](/imgs/installation-guide/All-In-One/completed-deploy.png)
 
 ### 使用 admin 账户登陆 console
 

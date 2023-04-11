@@ -22,7 +22,7 @@ KUBECUBE_VERSION=v1.8
 curl -fsSL https://kubecube.nos-eastchina1.126.net/kubecube-chart/${KUBECUBE_VERSION}
 ```
 
-### 通过 helm 在计算上安装 Warden
+### 通过 helm 在计算集群上安装 Warden
 
 创建 member-value.yaml 文件并填写必要的 value 值
 
@@ -50,9 +50,7 @@ global:
   # 如果要启动日志功能，请假以下值设置为 "enabled"
   hotPlugEnable:
     common:
-      logseer: "disabled" 
       logagent: "disabled"
-      elasticsearch: "disabled"
 
   localKubeConfig: xx # 当前集群的 kubeconfig 的 base64
   pivotKubeConfig: xx # 管控集群的 kubeconfig 的 base64
