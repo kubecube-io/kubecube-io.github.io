@@ -50,3 +50,48 @@ $secondary:  #FFFFFF;
     display: inline-block;
     text-align: left;
 }
+
+// 自定义表格样式
+.ext-table td,
+.ext-table th {
+    // 文本垂直居中
+    vertical-align: middle!important;
+    // 增加内外边框
+    border: 1px solid #000!important;
+    // 去除底色
+    background-color: #FFFFFF!important;
+    // 上下元素边距
+    padding: 0.25rem!important;
+}
+// 表头样式
+.ext-table thead th {
+    background-color: #F0F4FA!important;
+    // 文本水平居中
+    text-align: center!important;
+    white-space: nowrap !important;
+    padding: 0.75rem!important;
+}
+// 表格有rowspan时样式
+.ext-table td[rowspan] {
+    // 文本水平居中
+    text-align: center!important;
+    // white-space: nowrap !important;
+}
+// 表格有内容有--check-ok时样式
+.ext-table td:has(> .--check-ok),
+.ext-table td:has(> .--check-partial),
+.ext-table td:has(> .--check-fail) {
+    // 文本水平居中
+    text-align: center!important;
+}
+
+.--check-ok {
+    color: #12e10e!important;
+    text-align: center!important;
+}
+.--check-partial {
+    color: #ffc107!important;
+}
+.--check-fail {
+    color: #f76063!important;
+}
